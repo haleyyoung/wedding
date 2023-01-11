@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "MotionPicture";
+  src: local("MotionPicture"),
+   url("../public/fonts/MotionPicture_PersonalUseOnly.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "RemachineScript";
+  src: local("RemachineScript"),
+   url("../public/fonts/RemachineScript_Personal_Use.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +50,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  width: 100vw;
+}
+
+.content div {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 5em;
+  background: black;
+  opacity: 0.7;
+  color: white;
+  font-family: 'MotionPicture';
 }
