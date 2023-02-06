@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Box, LinkTab, Tab, Tabs} from '@mui/material';
 
+import { animated, useSpring } from '@react-spring/web';
 
 import { useState } from 'react';
 
@@ -15,12 +16,30 @@ export default function Content() {
     setTabIndex(newTabIndex);
   };
 
+  // const FadeIn = ({ isVisible, children }) => {
+  //   const styles = useSpring({
+  //     opacity: isVisible ? 1 : 0,
+  //     y: isVisible ? 0 : 24,
+  //   });
+  // }
+  const styles = useSpring({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+})
+
   return (
     <div className="content">
-      <img src={process.env.PUBLIC_URL + '/glacierPoint.jpg'}/>
-      <div>
+      <div className="text">
         You're invited to <br/> the wedding of <br/> Garrison Rios and Haley Young
 	    </div>
+      <div className="image"></div>
+      <animated.div style={styles}>
+        Testing parallax?
+      </animated.div>
     </div>
   );
 }

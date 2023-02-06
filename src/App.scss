@@ -56,11 +56,18 @@
   text-align: center;
 }
 
-.content img {
-  width: 100vw;
+
+.image {
+  background-image: url("../public/glacierPoint.jpg");
+
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.content div {
+
+.content .text {
   width: 100%;
   position: absolute;
   top: 40%;
