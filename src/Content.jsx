@@ -83,7 +83,16 @@ export default function Content() {
 //   )
   const ref = useRef()
   return (
-    <Parallax pages={3} ref={ref}>
+    <Parallax pages={3} ref={ref} style={{background: '#00001a'}}>
+      <ParallaxLayer
+        offset={0}
+        speed={0}
+        factor={3}
+        style={{
+          backgroundImage: '/stars.jpg',
+          backgroundSize: 'cover',
+        }}
+      />
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }} style={{zIndex: -1}}>
         <div className="image"></div>
       </ParallaxLayer>
