@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Box, LinkTab, Tab, Tabs} from '@mui/material';
+import GlobalNavbar from './GlobalNavbar.js';
 
 import { animated, useSpring } from '@react-spring/web';
 
@@ -83,7 +84,10 @@ export default function Content() {
 //   )
   const ref = useRef()
   return (
-    <Parallax pages={3} ref={ref} style={{background: '#00001a'}}>
+    <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
+      <ParallaxLayer sticky={{start: 0, end: 3}}>
+        <GlobalNavbar/>
+      </ParallaxLayer>
       <ParallaxLayer
         offset={0}
         speed={0}
@@ -97,8 +101,14 @@ export default function Content() {
         <div className="image"></div>
       </ParallaxLayer>
       <ParallaxLayer className="content" offset={0} speed={0.1} style={{zIndex: 9999}}>
-        <div className="text">
+        <div className="page-header-text">
           You're invited to <br/> the wedding of <br/> Garrison Rios and Haley Young
+        </div>
+      </ParallaxLayer>
+
+      <ParallaxLayer className="content" offset={1} speed={0.1} style={{zIndex: 9999}}>
+        <div className="text">
+          Tenaya Lake, Yosemite <br/> July 13, 2024 <br/> 9am
         </div>
       </ParallaxLayer>
 

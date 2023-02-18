@@ -12,7 +12,6 @@ function App() {
         <title>Garrison and Haley</title>
       </header>
       <body>
-        <GlobalNavbar/>
         <Content/>
       </body>
     </div>

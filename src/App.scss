@@ -12,6 +12,21 @@
   font-weight: bold;
 }
 
+@font-face
+ {
+  font-family: "BeautyMountains";
+  src: local("BeautyMountains"),
+   url("../public/fonts/BeautyMountains.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "MootJungle";
+  src: local("MootJungle"),
+   url("../public/fonts/MootJungle.ttf") format("truetype");
+  font-weight: bold;
+}
+
 
 .App {
   text-align: center;
@@ -70,6 +85,16 @@
   background-size: cover;
 }
 
+.page-header-text {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 5em;
+  background: black;
+  opacity: 0.7;
+  color: white;
+  font-family: 'BeautyMountains';
+}
 
 .content .text {
   width: 100%;
@@ -79,5 +104,14 @@
   background: black;
   opacity: 0.7;
   color: white;
-  font-family: 'MotionPicture';
+  font-family: 'MootJungle';
+}
+
+.parallax::-webkit-scrollbar {
+  display: none;
+}
+
+.parallax {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
