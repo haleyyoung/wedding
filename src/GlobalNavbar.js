@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import {Box, LinkTab, Tab, Tabs} from '@mui/material';
+// import {Box, LinkTab, Tab, Tabs} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
+import { Link } from "react-router-dom";
+import {Box, Tab, Tabs} from '@mui/material';
 
 export default function GlobalNavbar() {
 
@@ -57,7 +59,7 @@ export default function GlobalNavbar() {
   return (
 
     <ThemeProvider theme={theme}>
-      <Box className="nav">
+      <Box className="nav" sx={{zIndex: "999999"}}>
         <Tabs value={tabIndex} onChange={handleTabChange}
             centered
             indicatorColor="primary"
@@ -72,10 +74,9 @@ export default function GlobalNavbar() {
               },
             }}
             >
-          <Tab label="What's Happening?"/>
-          <Tab label="What To Bring" textColor="secondary"/>
-          <Tab label="The Day Of" textColor="primary"/>
-          <Tab label="Registry" textColor="primary"/>
+          <Tab label="What's Happening?" to="/" component={Link}/>
+          <Tab label="What To Bring" to="/what-to-bring" component={Link}/>
+          <Tab label="The Day Of" to="day-of" component={Link}/>
         </Tabs>
       </Box>
     </ThemeProvider>

@@ -10,6 +10,7 @@ import { animated, useSpring } from '@react-spring/web';
 import React, { useRef, useState } from 'react';
 import { useGesture } from 'react-use-gesture'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import DayOf from './DayOf.jsx';
 
 export default function Content() {
 
@@ -118,6 +119,9 @@ export default function Content() {
 
       <ParallaxLayer offset={2} speed={1}>
         <button onClick={() => ref.current.scrollTo(0)}>Scroll to top</button>
+      </ParallaxLayer>
+      <ParallaxLayer className="content" offset={2} speed={0.1} style={{zIndex: 9999}}>
+        <DayOf/>
       </ParallaxLayer>
     </Parallax>
   );
