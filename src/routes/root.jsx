@@ -13,8 +13,7 @@ export default function Root() {
         <GlobalNavbar/>
       </ParallaxLayer>
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
-        <Box sx={{paddingTop: '100px'}}>
-          Stuff??
+        <Box sx={{paddingTop: '48px'}}>
           <Outlet/>
         </Box>
       </ParallaxLayer>

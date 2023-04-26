@@ -20,8 +20,14 @@ function App() {
           path: "",
           element: <Content />,
         },
+      ],
+    },
+    {
+      path: "/day-of",
+      element: <Root/>,
+      children:[
         {
-          path: "day-of",
+          path: "",
           element: <DayOf />,
         },
       ],
