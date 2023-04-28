@@ -21,7 +21,7 @@ export default function DayOf() {
         <Box sx={{color: "white"}}>
           8am - 9am
           Other stuff
-          <Link href="https://goo.gl/maps/vCu7FjU1ZgniXATP9">Google maps</Link>
+          <Link href="https://goo.gl/maps/vCu7FjU1ZgniXATP9" target="_blank">Google maps</Link>
         </Box>
       </ParallaxLayer>
     </Parallax>

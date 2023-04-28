@@ -8,15 +8,15 @@ export default function Root() {
   const ref = useRef();
 
   return (
+    <>
+    <GlobalNavbar/>
     <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
       <ParallaxLayer sticky={{start: 0, end: 3}}>
-        <GlobalNavbar/>
       </ParallaxLayer>
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
-        <Box sx={{paddingTop: '48px'}}>
-          <Outlet/>
-        </Box>
+        <Outlet/>
       </ParallaxLayer>
     </Parallax>
+    </>
   );
 }

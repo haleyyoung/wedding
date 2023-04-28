@@ -1,12 +1,21 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom'
 // import {Box, LinkTab, Tab, Tabs} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom";
 import {Box, Tab, Tabs} from '@mui/material';
 
 export default function GlobalNavbar() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log("pathname", currentPath);
+  const tabs = [
+    "/",
+    "/what-to-bring",
+    "/day-of",
+  ];
 
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(tabs.indexOf(currentPath));
 
   const handleTabChange = (event, newTabIndex) => {
     setTabIndex(newTabIndex);
