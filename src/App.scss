@@ -27,7 +27,6 @@
   font-weight: bold;
 }
 
-
 .App {
   text-align: center;
 }
@@ -120,10 +119,13 @@
   color: white;
 
   .time {
+    flex: 1;
     font-size: 2.25rem;
     font-family: 'MootJungle';
   }
   .text {
+    flex: 3;
+    align-self: center;
     font-size: 1.25rem;
   }
 }
