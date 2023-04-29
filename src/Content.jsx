@@ -15,26 +15,17 @@ import DayOf from './DayOf.jsx';
 export default function Content() {
   const ref = useRef()
   return (
-    <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
-      <ParallaxLayer
-        offset={0}
-        speed={0}
-        factor={3}
-        style={{
-          backgroundImage: '/stars.jpg',
-          backgroundSize: 'cover',
-        }}
-      />
+    <Parallax className="parallax" pages={3} ref={ref}>
       <ParallaxLayer sticky={{ start: 0, end: 0.5 }} style={{zIndex: -1}}>
         <div className="image"></div>
       </ParallaxLayer>
-      <ParallaxLayer className="content" offset={0} speed={0.1} style={{zIndex: 9999}}>
+      <ParallaxLayer className="content" offset={0} speed={0.1}>
         <div className="page-header-text">
           You're invited to <br/> the wedding of <br/> Garrison Rios and Haley Young
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer className="content" offset={1} speed={0.1} style={{zIndex: 9999}}>
+      <ParallaxLayer className="content" offset={1} speed={0.1}>
         <div className="text">
           Tenaya Lake, Yosemite <br/> July 13, 2024 <br/> 9am
         </div>

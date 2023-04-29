@@ -3,13 +3,13 @@ import {Box, Link, LinkTab, Tab, Tabs} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
-export default function DayOf() {
+export default function WhatToBring() {
   const ref = useRef();
-  const theme = useTheme();
+  console.log("in day of??");
   return (
-    <Parallax className="parallax day-of" pages={3} ref={ref}>
-      <ParallaxLayer className="text" offset={0} speed={0.1}>
-        <Box className="agenda-item">
+    <Parallax className="parallax what-to-bring" pages={3} ref={ref} style={{background: '#000033'}}>
+      <ParallaxLayer className="text" offset={0} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             7 - 7:45am
           </div>
@@ -20,8 +20,8 @@ export default function DayOf() {
           </div>
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer className="text" offset={0.5} speed={0.1}>
-        <Box className="agenda-item">
+      <ParallaxLayer className="text" offset={0.5} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             7:45 - 9am
           </div>
@@ -33,8 +33,8 @@ export default function DayOf() {
           </div>
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer className="text" offset={1} speed={0.1}>
-        <Box className="agenda-item">
+      <ParallaxLayer className="text" offset={1} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             9 - 9:30am
           </div>
@@ -43,8 +43,8 @@ export default function DayOf() {
           </div>
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer className="text" offset={1.5} speed={0.1}>
-        <Box className="agenda-item">
+      <ParallaxLayer className="text" offset={1.5} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             9:30 - 11am
           </div>
@@ -53,8 +53,8 @@ export default function DayOf() {
           </div>
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer className="text" offset={2} speed={0.1}>
-        <Box className="agenda-item">
+      <ParallaxLayer className="text" offset={2} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             11am - dark
           </div>
@@ -66,8 +66,8 @@ export default function DayOf() {
           </div>
         </Box>
       </ParallaxLayer>
-      <ParallaxLayer className="text" offset={2.5} speed={0.1}>
-        <Box className="agenda-item">
+      <ParallaxLayer className="text" offset={2.5} speed={0.1} style={{zIndex: 9999}}>
+        <Box sx={{display: 'flex', gap: '20px', padding: '3em', textAlign: 'left'}}>
           <div className="time">
             2pm -
           </div>

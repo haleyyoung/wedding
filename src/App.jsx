@@ -7,6 +7,7 @@ import './App.scss';
 import GlobalNavbar from './GlobalNavbar.js';
 import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
+import WhatToBring from './WhatToBring.jsx';
 import Root from "./routes/root.jsx";
 import ParallaxTest from './ParallaxTest.jsx';
 
@@ -29,6 +30,16 @@ function App() {
         {
           path: "",
           element: <DayOf />,
+        },
+      ],
+    },
+    {
+      path: "/what-to-bring",
+      element: <Root/>,
+      children:[
+        {
+          path: "",
+          element: <WhatToBring />,
         },
       ],
     },

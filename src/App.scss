@@ -27,6 +27,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Ysabeau";
+  src: local("Ysabeau"),
+   url("../public/fonts/Ysabeau.ttf") format("truetype");
+}
+
 .App {
   text-align: center;
 }
@@ -117,15 +123,23 @@
 
 .day-of {
   color: white;
+  font-family: "Ysabeau";
 
-  .time {
-    flex: 1;
-    font-size: 2.25rem;
-    font-family: 'MootJungle';
-  }
-  .text {
-    flex: 3;
-    align-self: center;
-    font-size: 1.25rem;
+  .agenda-item {
+    display: flex;
+    gap: 20px;
+    padding: 3em;
+    text-align: left;
+
+    .time {
+      flex: 1;
+      font-size: 2.25rem;
+      font-family: 'MootJungle';
+    }
+    .text {
+      flex: 3;
+      align-self: center;
+      font-size: 1.25rem;
+    }
   }
 }

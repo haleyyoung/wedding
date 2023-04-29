@@ -39,6 +39,9 @@ export default function GlobalNavbar() {
       secondary: {
         main: '#ffaa00',
       },
+      action: {
+        active: '#ffaa00',
+      },
     },
     overrides: {
       MuiTabs: {
