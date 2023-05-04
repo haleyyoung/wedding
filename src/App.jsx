@@ -7,6 +7,7 @@ import './App.scss';
 import GlobalNavbar from './GlobalNavbar.js';
 import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
+import YosemiteRules from './YosemiteRules.jsx';
 import WhatToBring from './WhatToBring.jsx';
 import Root from "./routes/root.jsx";
 import ParallaxTest from './ParallaxTest.jsx';
@@ -40,6 +41,16 @@ function App() {
         {
           path: "",
           element: <WhatToBring />,
+        },
+      ],
+    },
+    {
+      path: "/yosemite-rules",
+      element: <Root/>,
+      children:[
+        {
+          path: "",
+          element: <YosemiteRules />,
         },
       ],
     },

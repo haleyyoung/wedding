@@ -88,7 +88,7 @@ export default function GlobalNavbar() {
             >
           <Tab label="What's Happening?" to="/" component={Link}/>
           <Tab label="What To Bring" to="/what-to-bring" component={Link}/>
-          <Tab label="The Day Of" to="day-of" component={Link}/>
+          <Tab label="The Day Of" to="/day-of" component={Link}/>
         </Tabs>
       </Box>
     </ThemeProvider>

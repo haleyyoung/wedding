@@ -33,6 +33,16 @@
    url("../public/fonts/Ysabeau.ttf") format("truetype");
 }
 
+body {
+  color: white;
+  font-family: "Ysabeau";
+  font-size: 1.25rem;
+
+  ul {
+    list-style: "୭";
+  }
+}
+
 .App {
   text-align: center;
 }

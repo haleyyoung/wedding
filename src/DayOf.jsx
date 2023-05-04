@@ -39,7 +39,7 @@ export default function DayOf() {
             9 - 9:30am
           </div>
           <div className="text">
-            🧖‍♀️🧖‍♂️ Wedding ceremony
+            🧖‍♀️🧖‍♂️ Wedding ceremony (please review <Link href="/yosemite-rules">Yosemite's Rules</Link>)
           </div>
         </Box>
       </ParallaxLayer>
