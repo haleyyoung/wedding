@@ -59,7 +59,7 @@ export default function DayOf() {
             11am - dark
           </div>
           <div className="text">
-            🌲 This is <i>your time</i> to enjoy Yosemite. You're already in the park for free! Go on a hike, or visit a waterfall or nice feature.
+            🌲 This is <i>your time</i> to enjoy Yosemite. You're already in the park! Go on a hike, or visit a waterfall or nice feature.
             You have enough time to travel to the valley, we'd highly recommend it! Or if you want to stay in the high country,
             <Link href="https://goo.gl/maps/47hts9AJq7eeXcU47" target="_blank" color="secondary" underline="none"> Tuolumne Meadows </Link>
             is one of our favorite spots 😍
