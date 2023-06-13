@@ -21,10 +21,38 @@ const navItems = [
   {text: "What To Bring", location: "/what-to-bring"},
   {text: "The Day Of", location: "/day-of"},
 ];
+const protectedNavItems = [
+  {text: "Wedding Party", location: "/wedding-party"},
+];
+const wedddingParty = [
+  "Haley Young",
+  "Garrison Rios",
+  "Hunter Young",
+  "Hailey Young",
+  "Meggie Rios",
+  "Meaghan Rios",
+  "Katelyn Sprofera",
+  "Justin Wilson",
+  "Mallory Wilson",
+  "Teresa Young",
+  "Ralph Young",
+  "Anne Harjer",
+  "Gary Sexton",
+  "Danny Rios",
+  "Daniel Rios",
+  "Barb Sprofera",
+  "Barbara Sprofera",
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [user, setUser] = React.useState(localStorage.getItem('user'));
+  const [isUserWeddingParty, setIsUserWeddingParty] = React.useState(
+    !!wedddingParty.find((person) => person.toLowerCase() === user.toLowerCase())
+  );
+  console.log("user", user, isUserWeddingParty);
+  console.log("mobileOpen", mobileOpen);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -34,6 +62,13 @@ export default function DrawerAppBar(props: Props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
         {navItems.map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item.text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        {isUserWeddingParty && protectedNavItems.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.text} />
@@ -74,6 +109,11 @@ export default function DrawerAppBar(props: Props) {
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
+              <Button key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }}>
+                {item.text}
+              </Button>
+            ))}
+            {isUserWeddingParty && protectedNavItems.map((item) => (
               <Button key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }}>
                 {item.text}
               </Button>
