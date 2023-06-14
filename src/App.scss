@@ -33,13 +33,16 @@
    url("../public/fonts/Ysabeau.ttf") format("truetype");
 }
 
-body {
+.App {
   color: white;
   font-family: "Ysabeau";
   font-size: 1.25rem;
 
   ul {
     list-style: "୭";
+    li {
+      list-style-position: inside;
+    }
   }
 }
 
@@ -150,6 +153,17 @@ body {
       flex: 3;
       align-self: center;
       font-size: 1.25rem;
+    }
+  }
+}
+
+.wedding-party {
+  .event {
+    font-weight: 800;
+    margin: 100px;
+    .note {
+      margin: 0 0 0 7px;
+      color: #902859;
     }
   }
 }

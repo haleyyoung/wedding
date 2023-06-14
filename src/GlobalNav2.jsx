@@ -82,7 +82,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar
         component="nav"
@@ -95,6 +95,7 @@ export default function DrawerAppBar(props: Props) {
           '& .css-rdiatk-MuiButtonBase-root-MuiTab-root.Mui-selected': {
             color: 'text.primary.contrastText',
           },
+          marginBottom: "56px",
         }}
       >
         <Toolbar>
@@ -121,7 +122,7 @@ export default function DrawerAppBar(props: Props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" sx={{marginBottom: "56px"}}>
         <Drawer
           container={container}
           variant="temporary"
