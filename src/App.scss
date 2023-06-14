@@ -159,11 +159,18 @@
 
 .wedding-party {
   .event {
+    h2 {
+      margin-bottom: 0;
+    }
+
     font-weight: 800;
     margin: 100px;
     .note {
-      margin: 0 0 0 7px;
+      margin: 0 0 25px 0;
       color: #902859;
     }
+  }
+  img {
+    width: 90%
   }
 }
