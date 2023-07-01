@@ -93,11 +93,41 @@
   text-align: center;
 }
 
+.navy-background {
+  //background: #000033;
+  background: pink;
+  height: 50vh;
+  width: 100%;
+}
 
-.image {
-  background-image: url("../public/glacierPoint.jpg");
+.image-1 {
+  background-image: url("../public/sunsetLayers1.png");
 
-  height: 500px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-2 {
+  background-image: url("../public/sunsetLayers2.png");
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-3 {
+  background-image: url("../public/sunsetLayers3.png");
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-4 {
+  background-image: url("../public/sunsetLayers4.png");
+
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,8 +138,8 @@
   position: absolute;
   top: 40%;
   font-size: 5em;
-  background: black;
-  opacity: 0.7;
+  //background: black;
+  //opacity: 0.7;
   color: white;
   font-family: 'BeautyMountains';
 }
