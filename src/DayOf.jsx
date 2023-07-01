@@ -58,10 +58,18 @@ export default function DayOf() {
       </Box>
       <Box className="agenda-item">
         <div className="time">
-          2pm -
+          ~2pm - 8pm
         </div>
         <div className="text">
           We'll be back in June Lake hanging out if anyone wants to join us
+        </div>
+      </Box>
+      <Box className="agenda-item">
+        <div className="time">
+          8pm - 10pm
+        </div>
+        <div className="text">
+          Dessert bar and camp fire at our AirBnb. This is totally optional if you want to have the evening to yourself!
         </div>
       </Box>
     </div>
