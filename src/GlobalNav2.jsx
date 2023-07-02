@@ -47,7 +47,7 @@ const wedddingParty = [
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [user, setUser] = React.useState(localStorage.getItem('user'));
+  const [user, setUser] = React.useState(localStorage.getItem('user') || '');
   const [isUserWeddingParty, setIsUserWeddingParty] = React.useState(
     !!wedddingParty.find((person) => person.toLowerCase() === user.toLowerCase())
   );

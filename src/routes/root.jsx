@@ -10,14 +10,14 @@ export default function Root() {
 
   return (
     <>
-    <GlobalNav2/>
-    <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
-      <ParallaxLayer sticky={{start: 0, end: 3}}>
-      </ParallaxLayer>
-      <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
-        <Outlet/>
-      </ParallaxLayer>
-    </Parallax>
+      <GlobalNav2/>
+      <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
+        <ParallaxLayer sticky={{start: 0, end: 3}}>
+        </ParallaxLayer>
+        <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>
+          <Outlet/>
+        </ParallaxLayer>
+      </Parallax>
     </>
   );
 }
