@@ -11,7 +11,7 @@ export default function Root() {
   return (
     <>
       <GlobalNav2/>
-      <Parallax className="parallax" pages={3} ref={ref} style={{background: '#000033'}}>
+      <Parallax className="parallax" pages={6} ref={ref} style={{background: '#000033'}}>
         <ParallaxLayer sticky={{start: 0, end: 3}}>
         </ParallaxLayer>
         <ParallaxLayer sticky={{ start: 0, end: 0.5 }}>

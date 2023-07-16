@@ -15,16 +15,33 @@ import DayOf from './DayOf.jsx';
 export default function Content() {
   const ref = useRef()
   return (
-    <Parallax className="parallax" pages={3} ref={ref} config={
-    {
-      mass: 5,
-      tension: 180,
-      friction: 180,
-}}>
+    <Parallax className="parallax" pages={2} ref={ref} config={
+      {
+        mass: 5,
+        tension: 180,
+        friction: 180,
+      }}
+    >
       <ParallaxLayer sticky={{start: 0, end: 2}}>
         <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
           <div className="image-1"></div>
-          <div className="navy-background"></div>
+          <div className="navy-background content">
+            <div className="text">
+              Tenaya Lake, Yosemite <br/> July 13, 2024 <br/> 9am
+            </div>
+            <div className="disclaimer">
+              We're going on an adventure for our wedding, and we'd love if you'd
+              join us, but we also know that this is by no means a traditional
+              wedding. Please checkout the pages here for all the info, and if -
+              for whatever reason - you'd rather not come, we encourage you to
+              make that choice for yourself, knowing there will be no hard feelings
+              on our end
+              <br/>
+              ~ Haley and Garrison
+            </div>
+
+            <button onClick={() => ref.current.scrollTo(0)}>Scroll to top</button>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.6}>
           <div className="image-2"></div>
@@ -38,7 +55,7 @@ export default function Content() {
         <ParallaxLayer offset={1} style={{zIndex: 4}} speed={0.8}>
           <div className="navy-background"></div>
         </ParallaxLayer>
-        <ParallaxLayer className="content" sticky={{ start: 0, end: 2 }} speed={1} style={{zIndex: 2}}>
+        <ParallaxLayer className="content" speed={0.1} style={{zIndex: 2}}>
           <div className="page-header-text">
             <span className="piece">
               Garrison Rios
@@ -54,14 +71,6 @@ export default function Content() {
             </span>
           </div>
         </ParallaxLayer>
-      </ParallaxLayer>
-      <ParallaxLayer className="content" offset={1}>
-        <div className="text">
-          Tenaya Lake, Yosemite <br/> July 13, 2024 <br/> 9am
-        </div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={2} speed={1}>
-        <button onClick={() => ref.current.scrollTo(0)}>Scroll to top</button>
       </ParallaxLayer>
     </Parallax>
   );

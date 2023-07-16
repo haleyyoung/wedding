@@ -96,7 +96,7 @@
 .navy-background {
   background: #000033;
   //background: pink;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -170,18 +170,16 @@
 
 .content .text {
   width: 100%;
-  position: absolute;
-  top: 40%;
   font-size: 5em;
-  background: black;
-  opacity: 0.7;
   color: white;
   font-family: 'MootJungle';
+  padding-top: 20vh;
 }
 
-.parallax {
-  height: calc(100vh - 65px);
-  position: absolute;
+.content .disclaimer {
+  color: white;
+  font-family: "Ysabeau";
+  font-size: 1.5em;
 }
 
 .parallax::-webkit-scrollbar {
