@@ -15,15 +15,15 @@ import DayOf from './DayOf.jsx';
 export default function Content() {
   const ref = useRef()
   return (
-    <Parallax className="parallax" pages={2} ref={ref} config={
+    <Parallax className="parallax" pages={1} ref={ref} config={
       {
         mass: 5,
         tension: 180,
         friction: 180,
       }}
     >
-      <ParallaxLayer sticky={{start: 0, end: 2}}>
-        <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
+      <ParallaxLayer sticky={{start: 0, end: 0.5}}>
+        <ParallaxLayer offset={0} style={{zIndex: 4}} speed={1.1}>
           <div className="image-1"></div>
           <div className="navy-background content">
             <div className="text">
@@ -35,13 +35,13 @@ export default function Content() {
               wedding. Please checkout the pages here for all the info, and if -
               for whatever reason - you'd rather not come, we encourage you to
               make that choice for yourself, knowing there will be no hard feelings
-              on our end
+              on our end.
               <br/>
               ~ Haley and Garrison
             </div>
-
             <button onClick={() => ref.current.scrollTo(0)}>Scroll to top</button>
           </div>
+          <div className="tenaya"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.6}>
           <div className="image-2"></div>
@@ -52,10 +52,7 @@ export default function Content() {
         <ParallaxLayer offset={0} style={{zIndex: 1}} speed={0.1}>
           <div className="image-4"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} style={{zIndex: 4}} speed={0.8}>
-          <div className="navy-background"></div>
-        </ParallaxLayer>
-        <ParallaxLayer className="content" speed={0.1} style={{zIndex: 2}}>
+        <ParallaxLayer offset={0.1} className="content" speed={-0.2} style={{zIndex: 2}}>
           <div className="page-header-text">
             <span className="piece">
               Garrison Rios
