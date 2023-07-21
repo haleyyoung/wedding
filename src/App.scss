@@ -34,7 +34,7 @@
 }
 
 .App {
-  background: blue;
+  background: #000033;
   color: white;
   font-family: "Ysabeau";
   font-size: 1.25rem;
@@ -152,7 +152,7 @@
 }
 
 .tenaya {
-  background-image: url("../public/tenayaLake.avif");
+  background-image: url("../public/tenayaLakeSunset.jpg");
 
   height: 100%;
   background-position: center;
@@ -195,6 +195,7 @@
   color: white;
   font-family: "Ysabeau";
   font-size: 1.5em;
+  background: linear-gradient(0deg, rgba(42,35,26,0) 0%, rgba(42,35,26,0.6) 50%, rgba(42,35,26,0.1) 100%);
 }
 
 .parallax::-webkit-scrollbar {
@@ -206,6 +207,10 @@
   // height: 100vh !important;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.sticky {
+  z-index: 1;
 }
 
 .coverup {
