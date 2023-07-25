@@ -151,13 +151,19 @@
   }
 }
 
-.tenaya {
-  background-image: url("../public/tenayaLakeSunset.jpg");
+.content-2-columns {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+}
 
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.tenaya {
+  flex: 2;
+
+  img {
+    max-width: 100%;
+  }
 
   @media (max-width: 600px) {
     left: 10%;
@@ -191,7 +197,8 @@
   padding-top: 20vh;
 }
 
-.content .disclaimer {
+.content-2-columns .disclaimer {
+  flex: 3;
   color: white;
   font-family: "Ysabeau";
   font-size: 1.5em;

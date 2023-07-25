@@ -15,8 +15,7 @@ import DayOf from './DayOf.jsx';
 export default function Content() {
   const ref = useRef()
   return (
-    <Parallax className="parallax App" pages={3} ref={ref}
-    >
+    <Parallax className="parallax App" pages={3} ref={ref}>
       <ParallaxLayer sticky={{start: 0, end: 0.75}}>
         <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
           <div className="image-1"></div>
@@ -31,13 +30,13 @@ export default function Content() {
           </div>
           <div className="navy-background content"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.3}>
+        <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.55}>
           <div className="image-2"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} style={{zIndex: 2}} speed={0.1}>
+        <ParallaxLayer offset={0} style={{zIndex: 2}} speed={0.3}>
           <div className="image-3"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} style={{zIndex: 1}} speed={0.01}>
+        <ParallaxLayer offset={0} style={{zIndex: 1}} speed={0.1}>
           <div className="image-4"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0.1} className="content" speed={-0.2} style={{zIndex: 2}}>
@@ -56,11 +55,9 @@ export default function Content() {
             </span>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1.49} style={{zIndex: 6}} speed={0.01}>
-          <div className="tenaya"></div>
-        </ParallaxLayer>
-        <ParallaxLayer offset={1.49} style={{background: 'transparent', height: '25%', marginTop: '55%', zIndex: 7}} speed={0.2}>
-          <div className="content">
+        <ParallaxLayer offset={0.99} style={{background: 'transparent', height: '25%', marginTop: '55%', zIndex: 7}} speed={0.2}>
+          <div className="content-2-columns">
+            <div className="tenaya"><img src="/tenayaLakeSunset.jpg"/></div>
             <div className="disclaimer">
               We're going on an adventure for our wedding, and we'd love if you'd
               join us, but we also know that this is, by no means, a traditional
