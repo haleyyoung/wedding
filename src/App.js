@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.scss';
 import GlobalNavbar from './GlobalNavbar.js';
 import Content from './Content.jsx';
-import ParallaxTest from './ParallaxTest.jsx';
 
 function App() {
   return (

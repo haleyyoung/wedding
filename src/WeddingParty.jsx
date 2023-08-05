@@ -6,7 +6,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 export default function YosemiteRules() {
   const ref = useRef();
   return (
-    <div className="parallax wedding-party" style={{background: '#000033'}}>
+    <div className="wedding-party" style={{background: '#000033'}}>
       <Box>
         <h1>Important Dates</h1>
         <div className="event">
@@ -28,7 +28,9 @@ export default function YosemiteRules() {
           <h2>Wedding!</h2>
           <div className="date">
             Saturday July 13, 2024 - 5am - 11am<br/>
-            Yosemite - Tenaya Lake
+            Yosemite - Tenaya Lake<br/><br/>
+            7pm - 10pm<br/>
+            June Lake
           </div>
         </div>
         <div className="event">
@@ -41,12 +43,14 @@ export default function YosemiteRules() {
       </Box>
       <Box>
         <h1>Lodging</h1>
-        <img src={process.env.PUBLIC_URL + "/airbnb.png"}/>
-        <p>The wedding party and immediate family will be staying in a
-        <Link href="https://goo.gl/maps/QBHNDEhc6tSeq6zz7" target="_blank" color="secondary" underline="none"> couple AirBnbs </Link>
-        we've reserved on Gull Lake, so no need to worry about lodging.</p>
-        <p>Each couple will have their own bedroom and bathroom.</p>
-        <p>No pets, unfortunately.</p>
+        <img className="airbnb-image" src={process.env.PUBLIC_URL + "/airbnbWithArrow.png"}/>
+        <Box className="airbnb-text">
+          <p>The wedding party and immediate family will be staying in a
+          <Link href="https://goo.gl/maps/QBHNDEhc6tSeq6zz7" target="_blank" color="secondary" underline="none"> couple AirBnbs </Link>
+          we've reserved on Gull Lake, so no need to worry about lodging.</p>
+          <p>Each couple will have their own bedroom and bathroom.</p>
+          <p>No pets, unfortunately.</p>
+        </Box>
       </Box>
     </div>
   );

@@ -11,7 +11,6 @@ import YosemiteRules from './YosemiteRules.jsx';
 import WhatToBring from './WhatToBring.jsx';
 import WeddingParty from './WeddingParty.jsx';
 import Root from "./routes/root.jsx";
-import ParallaxTest from './ParallaxTest.jsx';
 
 function App() {
   const router = createBrowserRouter([
