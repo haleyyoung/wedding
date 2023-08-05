@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Box, LinkTab, Tab, Tabs, TextField} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
-import GlobalNavbar from './GlobalNavbar.js';
 
 import { animated, config, easings, useSpring } from '@react-spring/web';
 
@@ -68,11 +67,13 @@ export default function Content() {
             <div className="image-1"></div>
             <div className="navy-background content">
               <div className="text">
-                July 13, 2024 <br/>
                 Tenaya Lake, Yosemite <br/>
-                9am <br/> <br/>
+                <div className="time">
+                  July 13, 2024<br/>
+                  9am
+                </div>
                 June Lake <br/>
-                8pm <br/>
+                <div className="time">8pm</div>
               </div>
               <div className="content-2-columns">
                 <div className="tenaya"><img src="/tenayaLakeSunset.jpg"/></div>

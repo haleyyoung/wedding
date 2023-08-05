@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -46,9 +46,10 @@ const wedddingParty = [
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [user, setUser] = React.useState(localStorage.getItem('user') || '');
-  const [isUserWeddingParty, setIsUserWeddingParty] = React.useState(
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState(window ? window().location.pathname : '/');
+  const [user, setUser] = useState(localStorage.getItem('user') || '');
+  const [isUserWeddingParty, setIsUserWeddingParty] = useState(
     !!wedddingParty.find((person) => person.toLowerCase() === user.toLowerCase())
   );
   console.log("user", user, isUserWeddingParty);
@@ -57,6 +58,9 @@ export default function DrawerAppBar(props: Props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  const handleNavChange = (tabPath) => {
+    setActiveTab(tabPath);
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -82,7 +86,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box className='desktop-nav' sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar
         component="nav"
@@ -110,12 +114,12 @@ export default function DrawerAppBar(props: Props) {
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }}>
+              <Button className={item.location == activeTab && 'active'} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
                 {item.text}
               </Button>
             ))}
             {isUserWeddingParty && protectedNavItems.map((item) => (
-              <Button key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }}>
+              <Button className={item.location == activeTab && 'active'} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
                 {item.text}
               </Button>
             ))}

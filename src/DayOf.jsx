@@ -12,8 +12,11 @@ export default function DayOf() {
         <div className="time">
           7 - 7:45am
         </div>
+        <div className="title">
+          Documents
+        </div>
         <div className="text">
-          📄 If you forgot to print your documents, Hunter will be at the
+          If you forgot to print your documents, Hunter will be at the
           <Link href="https://goo.gl/maps/vCu7FjU1ZgniXATP9" color="secondary" underline="none"> gas station exiting June Lake </Link>
           with extra copies of the paperwork that you'll need to get in to the park
         </div>
@@ -22,8 +25,11 @@ export default function DayOf() {
         <div className="time">
           7:45 - 9am
         </div>
+        <div className="title">
+          Commute
+        </div>
         <div className="text">
-          🚗 Drive to
+          Drive to
           <Link href="https://goo.gl/maps/so6z2n5h3kZJbGyR6" color="secondary" underline="none"> Tenaya Lake</Link>
           . You'll need a credit card (no cash accepted) for the $35 entry fee (we'll reimburse you).
           There can often be a line to get in on a Saturday morning, so plan accordingly
@@ -33,32 +39,41 @@ export default function DayOf() {
         <div className="time">
           9 - 9:30am
         </div>
+        <div className="title">
+          Ceremony
+        </div>
         <div className="text">
-          🧖‍♀️🧖‍♂️ Wedding ceremony (please review <Link href="/yosemite-rules" color="secondary" underline="none">Yosemite's Rules</Link>)
+          Wedding ceremony (please review <Link href="/yosemite-rules" color="secondary" underline="none">Yosemite's Rules</Link>)
         </div>
       </Box>
       <Box className="agenda-item">
         <div className="time">
           9:30 - 11am
         </div>
-        <div className="text">
-          🍴 Breakfast picnic
+        <div className="title">
+          Breakfast Picnic
         </div>
       </Box>
       <Box className="agenda-item">
         <div className="time">
           11am - dark
         </div>
+        <div className="title">
+          Explore
+        </div>
         <div className="text">
-          🌲 This is <i>your time</i> to enjoy Yosemite. You're already in the park! Go on a hike, or visit a waterfall or nice feature.
+          This is <i>your time</i> to enjoy Yosemite. You're already in the park! Go on a hike, or visit a waterfall or nice feature.
           You have enough time to travel to the valley, we'd highly recommend it! Or if you want to stay in the high country,
           <Link href="https://goo.gl/maps/47hts9AJq7eeXcU47" target="_blank" color="secondary" underline="none"> Tuolumne Meadows </Link>
-          is one of our favorite spots 😍
+          is one of our favorite spots!
         </div>
       </Box>
       <Box className="agenda-item">
         <div className="time">
           ~2pm - 8pm
+        </div>
+        <div className="title">
+          Relax
         </div>
         <div className="text">
           We'll be back in June Lake hanging out if anyone wants to join us
@@ -67,6 +82,9 @@ export default function DayOf() {
       <Box className="agenda-item">
         <div className="time">
           8pm - 10pm
+        </div>
+        <div className="title">
+          Dessert Bar (optional)
         </div>
         <div className="text">
           Dessert bar and camp fire at our AirBnb. This is totally optional if you want to have the evening to yourself!

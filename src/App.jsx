@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 import logo from './logo.svg';
 import './App.scss';
-import GlobalNavbar from './GlobalNavbar.js';
 import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
 import YosemiteRules from './YosemiteRules.jsx';

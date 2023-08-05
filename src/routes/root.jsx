@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import { Outlet } from "react-router-dom";
 import {Box} from '@mui/material';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import GlobalNavbar from '../GlobalNavbar.js';
 import GlobalNav2 from '../GlobalNav2.jsx';
 
 export default function Root() {
