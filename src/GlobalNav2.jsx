@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -46,14 +46,19 @@ const wedddingParty = [
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
+  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(window ? window().location.pathname : '/');
+  const [activeTab, setActiveTab] = useState(location.pathname);
   const [user, setUser] = useState(localStorage.getItem('user') || '');
   const [isUserWeddingParty, setIsUserWeddingParty] = useState(
     !!wedddingParty.find((person) => person.toLowerCase() === user.toLowerCase())
   );
   console.log("user", user, isUserWeddingParty);
   console.log("mobileOpen", mobileOpen);
+
+  useEffect(() => {
+    setActiveTab(location.pathname);
+  }, [location.pathname]);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -68,14 +73,32 @@ export default function DrawerAppBar(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.text} />
+              <ListItemText
+                primary={item.text}
+                sx={item.location == activeTab && {
+                  ['& span']: {
+                    width: 'fit-content',
+                    margin: 'auto',
+                    borderBottom: '2px solid white',
+                  }
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
         {isUserWeddingParty && protectedNavItems.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.text} />
+              <ListItemText
+                primary={item.text}
+                sx={item.location == activeTab && {
+                  ['& span']: {
+                    width: 'fit-content',
+                    margin: 'auto',
+                    borderBottom: '2px solid white',
+                  }
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -126,7 +149,7 @@ export default function DrawerAppBar(props: Props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav" sx={{marginBottom: "56px"}}>
+      <Box component="mobile-nav" sx={{marginBottom: "56px"}}>
         <Drawer
           container={container}
           variant="temporary"

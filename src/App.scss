@@ -107,8 +107,15 @@ body {
   }
 }
 
-.nav {
-  background: 'magenta';
+.mobile-nav {
+  .MuiListItemText-root.active {
+    border-bottom: 2px solid white;
+    span {
+      width: fit-content;
+      margin: auto;
+      border-bottom: 2px solid white;
+    }
+  }
 }
 
 .content {
@@ -319,6 +326,9 @@ body {
     .note {
       margin: 0 0 3px 0;
       color: #D48516;
+    }
+    .title {
+      font-family: 'Sansita';
     }
   }
   .airbnb-image {
