@@ -1,6 +1,6 @@
 export default function YosemiteRules() {
   return (
-    <div className="yosemite-rules" sx={{background: '#000033'}}>
+    <div className="yosemite-rules page" sx={{background: '#000033'}}>
       <h2>We're getting married in a National Park, so with that comes some unusual rules for a wedding...</h2>
       <div className="content-2-columns">
         <img className="image" src={process.env.PUBLIC_URL + "/meadow.png"}/>

@@ -29,7 +29,7 @@ export default function YosemiteRules() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="wedding-party" style={{background: '#000033'}}>
+      <div className="wedding-party page" style={{background: '#000033'}}>
         <Box>
           <h1>Important Dates</h1>
           <div className="event">

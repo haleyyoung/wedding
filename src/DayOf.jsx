@@ -7,7 +7,7 @@ export default function DayOf() {
   const ref = useRef();
   const theme = useTheme();
   return (
-    <div className="day-of">
+    <div className="day-of page">
       <Box className="agenda-item">
         <div className="time">
           7 - 7:45am
