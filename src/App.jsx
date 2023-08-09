@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,14 +13,15 @@ import WeddingParty from './WeddingParty.jsx';
 import Root from "./routes/root.jsx";
 
 function App() {
+  const [userChanged, setUserChanged] = useState(false);
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root/>,
+      element: <Root userChanged={userChanged}/>,
       children: [
         {
           path: "",
-          element: <Content />,
+          element: <Content notifyUserChange={setUserChanged}/>,
         },
       ],
     },

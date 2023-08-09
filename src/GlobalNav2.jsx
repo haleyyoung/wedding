@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import useUser from './hooks/useUser';
+import useUser, {findInvitedGuest} from './hooks/useUser';
 
 const drawerWidth = 240;
 const navItems = [
@@ -27,8 +27,8 @@ const protectedNavItems = [
   {text: "Wedding Party", location: "/wedding-party"},
 ];
 
-export default function DrawerAppBar(props: Props) {
-  const { window } = props;
+export default function DrawerAppBar(userChanged) {
+
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(location.pathname);
@@ -85,7 +85,7 @@ export default function DrawerAppBar(props: Props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window.document.body : undefined;
 
   return (
     <Box className='desktop-nav' sx={{ display: 'flex'}}>

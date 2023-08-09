@@ -14,7 +14,7 @@ import { useGesture } from 'react-use-gesture'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import DayOf from './DayOf.jsx';
 
-export default function Content() {
+export default function Content({notifyUserChange}) {
   const ref = useRef()
   const theme = createTheme({
     palette: {
@@ -66,6 +66,9 @@ export default function Content() {
     if (invitedGuest) {
       storeUser(name);
       setUser(invitedGuest);
+      if (invitedGuest.isWeddingParty || invitedGuest.isFamily) {
+        notifyUserChange(true);
+      }
     }
     setUsername(name);
   }
