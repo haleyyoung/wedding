@@ -15,6 +15,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import useUser from './hooks/useUser';
+
 const drawerWidth = 240;
 const navItems = [
   {text: "What's Happening?", location: "/"},
@@ -24,37 +26,14 @@ const navItems = [
 const protectedNavItems = [
   {text: "Wedding Party", location: "/wedding-party"},
 ];
-const wedddingParty = [
-  "Haley Young",
-  "Garrison Rios",
-  "Hunter Young",
-  "Hailey Young",
-  "Meggie Rios",
-  "Meaghan Rios",
-  "Katelyn Sprofera",
-  "Justin Wilson",
-  "Mallory Wilson",
-  "Teresa Young",
-  "Ralph Young",
-  "Anne Harjer",
-  "Gary Sexton",
-  "Danny Rios",
-  "Daniel Rios",
-  "Barb Sprofera",
-  "Barbara Sprofera",
-];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(location.pathname);
-  const [user, setUser] = useState(localStorage.getItem('user') || '');
-  const [isUserWeddingParty, setIsUserWeddingParty] = useState(
-    !!wedddingParty.find((person) => person.toLowerCase() === user.toLowerCase())
-  );
-  console.log("user", user, isUserWeddingParty);
-  console.log("mobileOpen", mobileOpen);
+  const user = useUser();
+  const isWeddingParty = user?.isWeddingParty || user?.isFamily;
 
   useEffect(() => {
     setActiveTab(location.pathname);
@@ -86,7 +65,7 @@ export default function DrawerAppBar(props: Props) {
             </ListItemButton>
           </ListItem>
         ))}
-        {isUserWeddingParty && protectedNavItems.map((item) => (
+        {isWeddingParty && protectedNavItems.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
               <ListItemText
@@ -141,7 +120,7 @@ export default function DrawerAppBar(props: Props) {
                 {item.text}
               </Button>
             ))}
-            {isUserWeddingParty && protectedNavItems.map((item) => (
+            {isWeddingParty && protectedNavItems.map((item) => (
               <Button className={item.location == activeTab && 'active'} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
                 {item.text}
               </Button>
