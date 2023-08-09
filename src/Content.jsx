@@ -3,9 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Box, LinkTab, Tab, Tabs, TextField} from '@mui/material';
+import Button from '@mui/material/Button';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
 
 import { animated, config, easings, useSpring } from '@react-spring/web';
+import useUser, {findInvitedGuest, storeUser} from './hooks/useUser';
 
 import React, { useRef, useState } from 'react';
 import { useGesture } from 'react-use-gesture'
@@ -14,14 +16,11 @@ import DayOf from './DayOf.jsx';
 
 export default function Content() {
   const ref = useRef()
-    const theme = createTheme({
+  const theme = createTheme({
     palette: {
       mode: 'dark',
       text: {
-        primary: {
-          main: '#ffffff',
-          contrastText: '#000033',
-        }
+        primary: '#ffffff',
       },
       primary: {
         main: '#ffffff',
@@ -59,6 +58,23 @@ export default function Content() {
     }
   });
 
+  const [user, setUser] = useState(useUser());
+  const [username, setUsername] = useState('');
+
+  const handleUsernameChange = (name) => {
+    const invitedGuest = findInvitedGuest(name);
+    if (invitedGuest) {
+      storeUser(name);
+      setUser(invitedGuest);
+    }
+    setUsername(name);
+  }
+
+  const handleUsernameSubmit = (name) => {
+    const storedUser = storeUser(name);
+    setUser(storedUser);
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Parallax className="parallax App" pages={3} ref={ref}>
@@ -88,8 +104,16 @@ export default function Content() {
                   ~ Haley and Garrison
                 </div>
               </div>
-              <div>Please let us know who you are, so we can show you relevant information</div>
-              <TextField id="outlined-basic" label="Name" variant="outlined" />
+              {(!user || user.isUnrecognizedUser) && (
+                <>
+                  <div>Please let us know who you are, so we can show you relevant information</div>
+                  <TextField id="outlined-basic" label="Name" variant="outlined" value={username} onChange={(e) => handleUsernameChange(e.target.value)}/>
+                  <Button variant="contained" onClick={(e) => handleUsernameSubmit(username)}>
+                    Submit
+                  </Button>
+                </>
+              )}
+              {(user && username) && <div className="welcome-back">Hi {user.name}!</div>}
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.55}>
@@ -103,6 +127,16 @@ export default function Content() {
           </ParallaxLayer>
           <ParallaxLayer offset={0.1} className="content" speed={-0.2} style={{zIndex: 2}}>
             <div className="page-header-text">
+              {(user && !username) &&
+                <div className="piece small">
+                  Welcome back, {user.name}!
+                </div>
+              }
+              {(user && username) &&
+                <div className="piece small">
+                  Hi {user.name}!
+                </div>
+              }
               <span className="piece">
                 Garrison Rios
               </span>

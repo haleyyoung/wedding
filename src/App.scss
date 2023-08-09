@@ -226,12 +226,20 @@ body {
   color: white;
   font-family: 'BeautyMountains';
 
+  .piece.small {
+    font-size: 0.5em;
+  }
+
   @media (max-width: 600px) {
     top: 0;
     font-size: 2em;
 
     .piece {
       display: block;
+
+      &.small {
+        font-size: 1.5em;
+      }
     }
   }
 }
