@@ -8,7 +8,7 @@ import './App.scss';
 import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
 import YosemiteRules from './YosemiteRules.jsx';
-import WhatToBring from './WhatToBring.jsx';
+import Planning from './Planning.jsx';
 import WeddingParty from './WeddingParty.jsx';
 import Root from "./routes/root.jsx";
 
@@ -36,12 +36,12 @@ function App() {
       ],
     },
     {
-      path: "/what-to-bring",
+      path: "/planning",
       element: <Root/>,
       children:[
         {
           path: "",
-          element: <WhatToBring />,
+          element: <Planning />,
         },
       ],
     },

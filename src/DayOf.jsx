@@ -40,10 +40,24 @@ export default function DayOf() {
           9 - 9:30am
         </div>
         <div className="title">
-          Ceremony
+          Wedding Ceremony
+          <div className="text">
+            {"Attire: "}
+            <Link
+              href="https://www.brides.com/story/wedding-dress-code-explained#mntl-sc-block_1-0-36"
+              target="_blank"
+              color="secondary"
+              underline="none"
+            >
+              Destination
+            </Link>
+          </div>
         </div>
         <div className="text">
-          Wedding ceremony (please review <Link href="/yosemite-rules" color="secondary" underline="none">Yosemite's Rules</Link>)
+          Once you park, continue past the signs down the trail. Someone from the wedding party will be there
+          to guide you to the ceremony location.
+          <br/>
+          (please review <Link href="/yosemite-rules" color="secondary" underline="none">Yosemite's Rules</Link>)
         </div>
       </Box>
       <Box className="agenda-item">
@@ -56,27 +70,19 @@ export default function DayOf() {
       </Box>
       <Box className="agenda-item">
         <div className="time">
-          11am - dark
+          11am - 8pm
         </div>
         <div className="title">
-          Explore
+          Explore or Relax
         </div>
         <div className="text">
           This is <i>your time</i> to enjoy Yosemite. You're already in the park! Go on a hike, or visit a waterfall or nice feature.
           You have enough time to travel to the valley, we'd highly recommend it! Or if you want to stay in the high country,
           <Link href="https://goo.gl/maps/47hts9AJq7eeXcU47" target="_blank" color="secondary" underline="none"> Tuolumne Meadows </Link>
           is one of our favorite spots!
-        </div>
-      </Box>
-      <Box className="agenda-item">
-        <div className="time">
-          ~2pm - 8pm
-        </div>
-        <div className="title">
-          Relax
-        </div>
-        <div className="text">
-          We'll be back in June Lake hanging out if anyone wants to join us
+          <br/>
+          There is also plenty to do in June Lake. Check out our <Link href="/planning" color="secondary" underline="none">planning page</Link> for
+          a list of activities.
         </div>
       </Box>
       <Box className="agenda-item">
@@ -85,6 +91,17 @@ export default function DayOf() {
         </div>
         <div className="title">
           Dessert Bar (optional)
+          <div className="text">
+            {"Attire: "}
+            <Link
+              href="https://www.brides.com/story/wedding-dress-code-explained#mntl-sc-block_1-0-47"
+              target="_blank"
+              color="secondary"
+              underline="none"
+            >
+              Come as you are
+            </Link>
+          </div>
         </div>
         <div className="text">
           Dessert bar and camp fire at our AirBnb. This is totally optional if you want to have the evening to yourself!

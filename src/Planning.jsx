@@ -3,7 +3,7 @@ import {Box, Link, LinkTab, Tab, Tabs} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
-export default function WhatToBring() {
+export default function Planning() {
   const ref = useRef();
   console.log("in day of??");
   return (

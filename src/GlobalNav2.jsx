@@ -20,8 +20,8 @@ import useUser, {findInvitedGuest} from './hooks/useUser';
 const drawerWidth = 240;
 const navItems = [
   {text: "What's Happening?", location: "/"},
-  {text: "What To Bring", location: "/what-to-bring"},
   {text: "The Day Of", location: "/day-of"},
+  {text: "Planning", location: "/planning"},
 ];
 const protectedNavItems = [
   {text: "Wedding Party", location: "/wedding-party"},
