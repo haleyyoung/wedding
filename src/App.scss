@@ -216,6 +216,25 @@ body {
   }
 }
 
+.user-form {
+  max-width: 800px;
+  width: 55vw;
+  margin: auto;
+  padding: 100px 0 50px 0;
+  font-size: 1.5em;
+
+  .mountains {
+    max-width: 100%;
+  }
+  .form-content {
+    height: 180px;
+
+    @media (max-width: 700px) {
+      height: 260px;
+    }
+  }
+}
+
 .page-header-text {
   width: 100%;
   position: absolute;
@@ -230,6 +249,10 @@ body {
     font-size: 0.5em;
   }
 
+  @media (max-width: 880px) and (min-width: 601px) {
+    font-size: 3em;
+  }
+
   @media (max-width: 600px) {
     top: 0;
     font-size: 2em;
@@ -238,7 +261,7 @@ body {
       display: block;
 
       &.small {
-        font-size: 1.5em;
+        font-size: 0.65em;
       }
     }
   }
@@ -250,9 +273,14 @@ body {
   color: white;
   font-family: 'MootJungle';
   padding-top: 20vh;
+  margin-bottom: 100px;
 
   .time {
     font-size: 0.75em;
+  }
+
+  @media (max-width: 880px) and (min-width: 601px) {
+    font-size: 4em;
   }
 
   @media (max-width: 600px) {
@@ -260,11 +288,14 @@ body {
   }
 }
 
-.content-2-columns {
+
+.padded-content {
   padding: 40px;
 
   .disclaimer {
-    flex: 3;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
     color: white;
     font-family: "Ysabeau";
     font-size: 1.5em;

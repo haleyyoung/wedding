@@ -21,6 +21,7 @@ export default function Content({notifyUserChange}) {
       mode: 'dark',
       text: {
         primary: '#ffffff',
+        secondary: '#FAB903',
       },
       primary: {
         main: '#ffffff',
@@ -54,8 +55,13 @@ export default function Content({notifyUserChange}) {
             color: 'green'
           }
         }
-      }
-    }
+      },
+      MuiTextfield: {
+        root: {
+          "& .MuiOutlinedInput-root":{"& > fieldset": {border: '1px solid green'}},
+        },
+      },
+    },
   });
 
   const [user, setUser] = useState(useUser());
@@ -80,7 +86,7 @@ export default function Content({notifyUserChange}) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Parallax className="parallax App" pages={3} ref={ref}>
+      <Parallax className="parallax App" pages={2.55} ref={ref}>
         <ParallaxLayer sticky={{start: 0, end: 0.75}}>
           <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
             <div className="image-1"></div>
@@ -94,7 +100,7 @@ export default function Content({notifyUserChange}) {
                 June Lake <br/>
                 <div className="time">8pm</div>
               </div>
-              <div className="content-2-columns">
+              <div className="padded-content">
                 <div className="tenaya"><img src="/tenayaLakeSunset.jpg"/></div>
                 <div className="disclaimer">
                   We're going on an adventure for our wedding, and we'd love if you'd
@@ -107,16 +113,33 @@ export default function Content({notifyUserChange}) {
                   ~ Haley and Garrison
                 </div>
               </div>
-              {(!user || user.isUnrecognizedUser) && (
-                <>
-                  <div>Please let us know who you are, so we can show you relevant information</div>
-                  <TextField id="outlined-basic" label="Name" variant="outlined" value={username} onChange={(e) => handleUsernameChange(e.target.value)}/>
-                  <Button variant="contained" onClick={(e) => handleUsernameSubmit(username)}>
-                    Submit
-                  </Button>
-                </>
-              )}
-              {(user && username) && <div className="welcome-back">Hi {user.name}!</div>}
+              <div className="user-form">
+                <img className="mountains" src="/mountains.png"/>
+                {(!user || user.isUnrecognizedUser) && (
+                  <div className="form-content">
+                    <div>Please let us know who you are, so we can show you relevant information</div>
+                    <div>
+                    <TextField color="secondary" label="Name" variant="outlined" 
+                        sx={{
+                            margin: '15px',
+                            "& .MuiOutlinedInput-notchedOutline": '1px solid #FAB903',
+                            "& .MuiFormLabel-root": {
+                              color: "white",
+                            },
+                            }}
+                        value={username}
+                        onChange={(e) => handleUsernameChange(e.target.value)}
+                    />
+                    <Button classname="submit-button" variant="contained" color="secondary" 
+                        sx={{ marginLeft: '15px', marginTop: '25px', '@media (max-width: 700px)': {display: 'block', margin: '0 auto'}}}
+                        onClick={(e) => handleUsernameSubmit(username)} disabled={username?.length < 2}>
+                      Submit
+                    </Button>
+                  </div>
+                  </div>
+                )}
+                {(user && username) && <div className="form-content welcome-back">Hi {user.name}!</div>}
+              </div>
             </div>
           </ParallaxLayer>
           <ParallaxLayer offset={0} style={{zIndex: 3}} speed={0.55}>
