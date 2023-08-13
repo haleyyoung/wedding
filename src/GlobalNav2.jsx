@@ -33,7 +33,7 @@ export default function DrawerAppBar(userChanged) {
     {text: "Registry", location: "/registry"},
   ];
   const protectedNavItems = [
-    {text: user.isWeddingParty ? "Wedding Party" : "Family", location: "/wedding-party"},
+    {text: user?.isWeddingParty ? "Wedding Party" : "Family", location: "/wedding-party"},
   ];
 
   useEffect(() => {

@@ -10,20 +10,7 @@ export default function DayOf() {
     <div className="day-of page">
       <Box className="agenda-item">
         <div className="time">
-          7 - 7:45am
-        </div>
-        <div className="title">
-          Documents
-        </div>
-        <div className="text">
-          If you forgot to print your documents, Hunter will be at the
-          <Link href="https://goo.gl/maps/vCu7FjU1ZgniXATP9" color="secondary" underline="none"> gas station exiting June Lake </Link>
-          with extra copies of the paperwork that you'll need to get in to the park
-        </div>
-      </Box>
-      <Box className="agenda-item">
-        <div className="time">
-          7:45 - 9am
+          7:30 - 9am
         </div>
         <div className="title">
           Commute
@@ -68,7 +55,7 @@ export default function DayOf() {
           Breakfast Picnic
         </div>
         <div className="text">
-          There will be no formal reception.
+          Picnic blankets, food and drinks will be provided. There will be no formal reception.
         </div>
       </Box>
       <Box className="agenda-item">
@@ -84,7 +71,7 @@ export default function DayOf() {
           <Link href="https://goo.gl/maps/47hts9AJq7eeXcU47" target="_blank" color="secondary" underline="none"> Tuolumne Meadows </Link>
           is one of our favorite spots!
           <br/>
-          There is also plenty to do in June Lake. Check out our <Link href="/planning" color="secondary" underline="none">planning page</Link> for
+          There is also plenty to do in June Lake. Check out our <Link href="/planning#activities" color="secondary" underline="none">planning page</Link> for
           a list of activities.
         </div>
       </Box>
@@ -93,8 +80,9 @@ export default function DayOf() {
           8pm - 10pm
         </div>
         <div className="title">
-          Dessert Bar (optional)
+          Dessert Bar
           <div className="text">
+            <div>(optional)</div>
             {"Attire: "}
             <Link
               href="https://www.brides.com/story/wedding-dress-code-explained#mntl-sc-block_1-0-47"

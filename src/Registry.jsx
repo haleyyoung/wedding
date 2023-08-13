@@ -10,20 +10,7 @@ export default function Registry() {
     <div className="day-of page">
       <Box className="agenda-item">
         <div className="time">
-          7 - 7:45am
-        </div>
-        <div className="title">
-          Documents
-        </div>
-        <div className="text">
-          If you forgot to print your documents, Hunter will be at the
-          <Link href="https://goo.gl/maps/vCu7FjU1ZgniXATP9" color="secondary" underline="none"> gas station exiting June Lake </Link>
-          with extra copies of the paperwork that you'll need to get in to the park
-        </div>
-      </Box>
-      <Box className="agenda-item">
-        <div className="time">
-          7:45 - 9am
+          7:30 - 9am
         </div>
         <div className="title">
           Commute

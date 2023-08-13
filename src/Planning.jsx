@@ -6,47 +6,46 @@ import useUser from './hooks/useUser';
 
 export default function Planning() {
   const ref = useRef();
-  const theme = useTheme();
   const user = useUser();
   return (
-    <div className="planning day-of page">
-      <Box className="agenda-item">
-        <div className="time">
+    <div className="planning page">
+      <Box className="section">
+        <div className="title">
           Lodging
-          <div className="text">
-            (Those marked with an * are within a 15 minute walk to our AirBnb!)
+          <div className="note">
+            (Those marked with a <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/> are within a 15 minute walk to our AirBnb!)
           </div>
         </div>
-        <div className="title">
+        <div className="sub-title">
           Hotels/Cabins
         </div>
         <div className="text">
-          {(user.isFamily || user.isWeddingParty) && (
+          {(user?.isFamily || user?.isWeddingParty) && (
             <div className="alert-stamp">
-              {user.isWeddingParty && (
+              {user?.isWeddingParty && (
                 <div className="group"><span>Wedding party,</span></div>
               )}
-              {!user.isWeddingParty && user.isFamily && (
+              {!user?.isWeddingParty && user?.isFamily && (
                 <div className="group"><span>Family,</span></div>
               )}
               <span>we gotchu July 12-14</span>
             </div>
           )}
-          <b>Lodging is <i>extremely</i> limited in the small town of June Lake, so you'll want to book ASAP. </b>
+          Lodging is <i>extremely</i> limited in the small town of June Lake, so you'll want to book ASAP.
           <img src={process.env.PUBLIC_URL + "/lodging.jpg"}/>
           <div>Here are a few places we'd recommend.</div>
           <br/>
           <Link href="https://www.heidelberginnresort.com/" target="_blank" color="secondary" underline="none">
             Heidelberg Inn
-          </Link>* (call to book)
-          <br/>
+          </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/>
+          <div className="details">(call to book)</div>
           <Link href="https://www.lakefrontcabins.co/" target="_blank" color="secondary" underline="none">
             Lake Front Cabins
-          </Link>*
+          </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/>
           <br/>
           <Link href="https://junelakemotel.com/" target="_blank" color="secondary" underline="none">
             June Lake Motel
-          </Link>*
+          </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/>
           <br/>
           <Link href="https://doubleeagle.com/" target="_blank" color="secondary" underline="none">
             Double Eagle Resort & Spa
@@ -56,36 +55,37 @@ export default function Planning() {
             A-frame Cabins
           </Link>
           <br/>
-          
+          <br/>
           When searching on sites like AirBnb and Vrbo, be aware that they'll try to recommend places in Mammoth.
-          This will add another 20-30 minutes to the estimated 90 minute drive from June Lake to Tenaya Lake on the morning of
+          This will add another 20-30 minutes to the estimated 1 <span className="fraction">1/2</span> hour drive from June Lake to Tenaya Lake on the morning of
           the wedding. We strongly recommend you stay in June Lake, if possible.
           <br/>
-          <i>Text Haley if you're having trouble finding lodging.</i>
+          <div className="note">Text Haley if you're having trouble finding lodging.</div>
         </div>
-        <div className="title">
+        <div className="sub-title">
           Camping
         </div>
         <div className="text">
           <img src={process.env.PUBLIC_URL + "/gullLakeCampground.png"}/><br/>
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20568" color="secondary" underline="none" target="_blank">
             Gull Lake Campground
-          </Link>*<br/>
-          There are only ~10 spots and they go quick. Make sure to check when sites are released.<br/>
+          </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/>
+          <div className="details">There are only ~10 spots and they go quick. Make sure to check when sites are released.</div>
           <Link href="https://goldenpinervpark.com/" color="secondary" underline="none" target="_blank">
             Golden Pine RV Park
-          </Link>*<br/>
+          </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/><br/>
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20562" color="secondary" underline="none" target="_blank">
             Hartley Springs campground
-          </Link><br/>
-          You can ride your OHV straight out of camp!
+          </Link>
+          <div className="details">You can ride your OHV straight out of camp!</div>
         </div>
-        <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
       </Box>
-      <Box className="agenda-item">
-        {user.isFlying && (
+      <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
+      <Box className="section">
+        <div className="title">Transportation</div>
+        { (!user || user?.isFlying) && (
           <>
-            <div className="time">
+            <div className="sub-title">
               Flying
             </div>
             <div className="text">
@@ -95,20 +95,20 @@ export default function Planning() {
             </div>
           </>
         )}
-        {user.isDriving && (
+        {(!user || user?.isDriving) && (
           <>
-            <div className="time">
+            <div className="sub-title">
               Driving
             </div>
             <div className="text">
-              Coming from San Diego, the 395 will be your best friend for the better part of a 6 hour drive.
+              Coming from San Diego, the 395 will be your best friend for the better part of a 6 <span className="fraction">1/2</span> hour drive.
             </div>
           </>
         )}
-        <img className="separator" src={process.env.PUBLIC_URL + "/mountains.png"}/>
       </Box>
-      <Box className="agenda-item">
-        <div className="time">
+      <img className="separator" src={process.env.PUBLIC_URL + "/mountains.png"}/>
+      <Box className="section">
+        <div className="title">
           Yosemite
         </div>
         <div className="text">
@@ -131,10 +131,10 @@ export default function Planning() {
             The Ahwahnee
           </Link>
         </div>
-        <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
       </Box>
-      <Box className="agenda-item">
-        <div className="time">
+      <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
+      <Box className="section">
+        <div id="activities" className="title">
           June Lake Activities
         </div>
         <div className="text">
