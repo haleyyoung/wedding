@@ -145,7 +145,17 @@ body {
 }
 
 .page {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 25px 40px !important;
+  color: white;
+  font-family: "Cabin";
+  text-align: center;
+
+  .page-title {
+    font-family: 'DancingScript';
+    font-size: 4rem;
+  }
 }
 
 .content {
@@ -216,7 +226,6 @@ body {
 .content-2-columns {
   display: flex;
   flex-direction: row;
-  height: 100vh;
   align-items: center;
   gap: 15px;
   margin: 25px 0;
@@ -353,11 +362,16 @@ body {
 }
 
 .day-of {
-  max-width: 1200px;
-  margin: 0 auto;
-  color: white;
-  font-family: "Cabin";
-  text-align: center;
+  //max-width: 1200px;
+  //margin: 0 auto;
+  //color: white;
+  //font-family: "Cabin";
+  //text-align: center;
+
+  //.page-title {
+  //  font-family: 'DancingScript';
+  //  font-size: 3em;
+  //}
 
   .agenda-item {
     gap: 20px;
@@ -379,14 +393,18 @@ body {
 }
 
 .planning {
-  max-width: 1200px;
-  margin: 0 auto;
-  color: white;
-  font-family: "Cabin";
-  text-align: center;
+  //max-width: 1200px;
+  //margin: 0 auto;
+  //color: white;
+  //font-family: "Cabin";
+  //text-align: center;
 
   .section {
     padding: 3em;
+
+    &:first-child {
+      padding-top: 0;
+    }
 
     img {
       max-width: 100%;
@@ -415,12 +433,12 @@ body {
     }
 
     .title {
-      font-size: 3rem;
-      font-family: 'Sansita';
+      font-size: 3.5rem;
+      font-family: 'DancingScript';
       margin-bottom: 15px;
 
       @media(max-width: 600px) {
-        font-size: 2.25rem;
+        font-size: 2.75rem;
       }
     }
     .sub-title {
@@ -471,6 +489,7 @@ body {
     }
 
     @media(max-width: 600px) {
+      margin-top: 0;
       font-size: 1.5em;
       top: 50%;
       left: 10%;
@@ -498,69 +517,29 @@ body {
   padding-bottom: 40px;
 
   .event {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 50px auto;
-    background: linear-gradient(49deg, #D48516 0%, rgba(255,192,0,0) 30%, rgba(255,192,0,0) 100%);
-    height: 250px;
     max-width: 500px;
     border-radius: 7px;
-    padding: 20px;
-
-    &.two {
-      background: linear-gradient(221deg, #7C0D6C 0%, rgba(255,192,0,0) 30%, rgba(255,192,0,0) 100%);
-    }
-
-    &.three {
-      background: linear-gradient(49deg, #983450 0%, rgba(255,192,0,0) 30%, rgba(255,192,0,0) 100%);
-    }
-
-    &.four {
-      background: linear-gradient(221deg, #D48516 0%, rgba(255,192,0,0) 30%, rgba(255,192,0,0) 100%);
-    }
-
-    h2 {
-      margin-bottom: 0;
-    }
+    padding: 0 20px;
 
     .note {
       margin: 0 0 3px 0;
-      color: #D48516;
+      color: #ffaa00;
     }
     .title {
       font-family: 'Sansita';
+      font-size: 2rem;
     }
   }
-  .airbnb-image {
-    float: right;
-    height: 50vh;
-    margin-right: 6%;
-    margin-bottom: -7.5%;
+  .content-2-columns {
+    img {
+      width: 55%;
+      border-radius: 7px;
+    }
   }
-  .arrow-image {
-    position: relative;
-    height: 225px;
-    margin-left: 20vw;
-    margin-top: 7%;
-  }
-  .airbnb-text {
-    position: relative;
-    border-radius: 7px;
-    background: linear-gradient(229deg, #7C0D6C 0%, #7C0D6C 20%, rgba(255,192,0,0) 100%);
-    padding: 0 100px;
-    width: 55vw;
-    max-width: 750px;
-    margin-left: 6%;
-    height: 300px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    p {
-      line-height: 1.5;
-    }
+  img {
+    max-width: 100%;
   }
 }
 
@@ -599,5 +578,55 @@ body {
   img {
     width: 50vw;
     border-radius: 7px;
+  }
+}
+
+.registry {
+  max-width: 1500px;
+  font-size: 1.4rem;
+  font-family: 'Cabin';
+  margin: 40px auto;
+  padding: 0 40px;
+  font-size: 1.65rem;
+
+  .section {
+    margin: 50px;
+  }
+
+  .note {
+    font-size: 1.25rem;
+    color: #ffaa00;
+  }
+
+  .content-2-columns {
+    div {
+      width: 50%;
+
+      @media(max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    .item {
+      margin: 10px;
+      font-size: 1.4rem;
+
+      @media(max-width: 600px) {
+        margin: 10px 0;
+      }
+    }
+
+    .order-2 {
+      order: 2;
+    }
+
+    img {
+      width: 55%;
+      border-radius: 7px;
+    }
+  }
+
+  img {
+    max-width: 100%;
   }
 }

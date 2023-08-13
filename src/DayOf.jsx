@@ -8,6 +8,7 @@ export default function DayOf() {
   const theme = useTheme();
   return (
     <div className="day-of page">
+      <div className="page-title">Schedule</div>
       <Box className="agenda-item">
         <div className="time">
           7:30 - 9am
