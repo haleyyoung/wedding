@@ -15,12 +15,12 @@ export default function Root(userChanged) {
         secondary: '#FAB903',
       },
       primary: {
-        main: '#ffffff',
+        main: '#c0268f',
         contrastText: '#000033',
       },
       secondary: {
-        //main: '#ffaa00',
-        main: '#c0268f',
+        main: '#ffaa00',
+        //main: '#c0268f',
       },
       action: {
         active: '#ffaa00',

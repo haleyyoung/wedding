@@ -281,6 +281,10 @@ export function storeUser(name) {
   return user;
 }
 
+export function removeUser() {
+  localStorage.removeItem('user');
+}
+
 export default function useUser() {
   const username = localStorage.getItem('user');
   if (!username) {

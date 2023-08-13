@@ -2,11 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Box, LinkTab, Tab, Tabs, TextField} from '@mui/material';
-import Button from '@mui/material/Button';
+import {Box, Button, Link, LinkTab, Tab, Tabs, TextField} from '@mui/material';
 
 import { animated, config, easings, useSpring } from '@react-spring/web';
-import useUser, {findInvitedGuest, storeUser} from './hooks/useUser';
+import useUser, {findInvitedGuest, removeUser, storeUser} from './hooks/useUser';
 
 import React, { useRef, useState } from 'react';
 import { useGesture } from 'react-use-gesture'
@@ -14,8 +13,9 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import DayOf from './DayOf.jsx';
 
 export default function Content({notifyUserChange}) {
-  const ref = useRef()
-
+  const ref = useRef();
+  const isMobile = window?.outerWidth < 601;
+  console.log("window?", isMobile);
 
   const [user, setUser] = useState(useUser());
   const [username, setUsername] = useState('');
@@ -35,6 +35,11 @@ export default function Content({notifyUserChange}) {
   const handleUsernameSubmit = (name) => {
     const storedUser = storeUser(name);
     setUser(storedUser);
+  }
+
+  const clearUser = () => {
+    setUser(null);
+    removeUser();
   }
 
   return (
@@ -73,7 +78,6 @@ export default function Content({notifyUserChange}) {
                   <TextField color="secondary" label="Name" variant="outlined" 
                       sx={{
                           margin: '15px',
-                          "& .MuiOutlinedInput-notchedOutline": '1px solid #FAB903',
                           "& .MuiFormLabel-root": {
                             color: "white",
                           },
@@ -81,7 +85,7 @@ export default function Content({notifyUserChange}) {
                       value={username}
                       onChange={(e) => handleUsernameChange(e.target.value)}
                   />
-                  <Button classname="submit-button" variant="contained" color="secondary" 
+                  <Button className="submit-button" variant="contained" color="secondary" 
                       sx={{ marginLeft: '15px', marginTop: '25px', '@media (max-width: 700px)': {display: 'block', margin: '0 auto'}}}
                       onClick={(e) => handleUsernameSubmit(username)} disabled={username?.length < 2}>
                     Submit
@@ -89,7 +93,14 @@ export default function Content({notifyUserChange}) {
                 </div>
                 </div>
               )}
-              {(user && username) && <div className="form-content welcome-back">Hi {user.name}!</div>}
+              <div className="form-content welcome-back">
+                {user && (
+                  <>
+                  {username && <div>Hi {user.name}!</div>}
+                    <div>Wrong name? <Link onClick={clearUser} color="primary">Log out</Link></div>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </ParallaxLayer>
