@@ -3,7 +3,7 @@ import {Box, Link, LinkTab, Tab, Tabs} from '@mui/material';
 import { createTheme, useTheme, ThemeProvider } from '@mui/material/styles';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
-export default function DayOf() {
+export default function Registry() {
   const ref = useRef();
   const theme = useTheme();
   return (
@@ -66,9 +66,6 @@ export default function DayOf() {
         </div>
         <div className="title">
           Breakfast Picnic
-        </div>
-        <div className="text">
-          There will be no formal reception.
         </div>
       </Box>
       <Box className="agenda-item">

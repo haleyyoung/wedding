@@ -41,6 +41,18 @@
    url("../public/fonts/Ysabeau.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "PerfectlyScratchy";
+  src: local("Ysabeau"),
+   url("../public/fonts/PerfectlyScratchy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ArmyRust";
+  src: local("Ysabeau"),
+   url("../public/fonts/ArmyRust.ttf") format("truetype");
+}
+
 body {
   background: #000033 !important;
 }
@@ -347,6 +359,34 @@ body {
       align-self: center;
       font-size: 1.65rem;
     }
+  }
+}
+
+.planning {
+  .alert-stamp {
+    position: absolute;
+    font-size: 2em;
+    font-family: 'ArmyRust';
+    color: #FFAA00;
+    transform: rotate(-25deg);
+
+    span {
+      background: #000033BB;
+    }
+
+    @media(max-width: 600px) {
+      font-size: 1.5em;
+      left: 0;
+      top: 35%;
+    }
+
+    .group {
+      line-height: 0.4em;
+    }
+  }
+
+  .separator {
+    margin-top: 50px;
   }
 }
 

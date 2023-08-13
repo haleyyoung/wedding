@@ -9,6 +9,7 @@ import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
 import YosemiteRules from './YosemiteRules.jsx';
 import Planning from './Planning.jsx';
+import Registry from './Registry.jsx';
 import WeddingParty from './WeddingParty.jsx';
 import Root from "./routes/root.jsx";
 
@@ -52,6 +53,16 @@ function App() {
         {
           path: "",
           element: <YosemiteRules />,
+        },
+      ],
+    },
+    {
+      path: "/registry",
+      element: <Root/>,
+      children:[
+        {
+          path: "",
+          element: <Registry />,
         },
       ],
     },

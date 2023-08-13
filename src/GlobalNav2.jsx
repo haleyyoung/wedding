@@ -18,22 +18,23 @@ import Button from '@mui/material/Button';
 import useUser, {findInvitedGuest} from './hooks/useUser';
 
 const drawerWidth = 240;
-const navItems = [
-  {text: "What's Happening?", location: "/"},
-  {text: "The Day Of", location: "/day-of"},
-  {text: "Planning", location: "/planning"},
-];
-const protectedNavItems = [
-  {text: "Wedding Party", location: "/wedding-party"},
-];
 
 export default function DrawerAppBar(userChanged) {
-
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(location.pathname);
   const user = useUser();
   const isWeddingParty = user?.isWeddingParty || user?.isFamily;
+
+  const navItems = [
+    {text: "What's Happening?", location: "/"},
+    {text: "The Day Of", location: "/day-of"},
+    {text: "Planning", location: "/planning"},
+    {text: "Registry", location: "/registry"},
+  ];
+  const protectedNavItems = [
+    {text: user.isWeddingParty ? "Wedding Party" : "Family", location: "/wedding-party"},
+  ];
 
   useEffect(() => {
     setActiveTab(location.pathname);
