@@ -152,6 +152,10 @@ body {
   font-family: "Cabin";
   text-align: center;
 
+  @media (max-width: 600px) {
+    padding: 25px !important;
+  }
+
   .page-title {
     font-family: 'DancingScript';
     font-size: 4rem;
@@ -266,6 +270,7 @@ body {
     @media (max-width: 700px) {
       height: 260px;
       margin-bottom: -260px;
+      font-size: 0.8rem;
     }
   }
 }
@@ -303,7 +308,7 @@ body {
 
 .content .text {
   width: 100%;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: white;
   font-family: 'DancingScript';
   padding-top: 20vh;
@@ -319,13 +324,17 @@ body {
 .padded-content {
   padding: 40px;
 
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+
   .disclaimer {
     max-width: 1000px;
     margin: auto;
     margin-top: 30px;
     color: white;
     font-family: "Cabin";
-    font-size: 1.3em;
+    font-size: 1.3rem;
 
     .signature {
       font-family: 'DancingScript';
@@ -354,7 +363,12 @@ body {
 .day-of {
   .agenda-item {
     gap: 20px;
-    padding: 3em;
+    padding: 3rem;
+
+    @media (max-width: 600px) {
+      padding: 0;
+      padding-top: 80px;
+    }
 
     .time {
       font-size: 2.25rem;
@@ -367,13 +381,21 @@ body {
     .text {
       align-self: center;
       font-size: 1.4rem;
+
+      @media (max-width: 600px) {
+        font-size: 1.2rem;
+      }
     }
   }
 }
 
 .planning {
   .section {
-    padding: 3em;
+    padding: 3rem;
+
+    @media (max-width: 600px) {
+      padding: 0;
+    }
 
     &:first-child {
       padding-top: 0;
@@ -452,7 +474,7 @@ body {
   .alert-stamp {
     position: absolute;
     margin-top: 50px;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: 'ArmyRust';
     color: #FFAA00;
     transform: rotate(-25deg);
@@ -463,13 +485,13 @@ body {
 
     @media(max-width: 600px) {
       margin-top: 0;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       top: 50%;
       left: 10%;
     }
 
     .group {
-      line-height: 0.4em;
+      line-height: 0.4rem;
     }
   }
 
@@ -562,13 +584,25 @@ body {
   padding: 0 40px;
   font-size: 1.65rem;
 
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+  }
+
   .section {
     margin: 50px;
+
+    @media (max-width: 600px) {
+      margin: 50px 0;
+    }
   }
 
   .note {
     font-size: 1.25rem;
     color: #ffaa00;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 
   .content-2-columns {
@@ -596,6 +630,10 @@ body {
     img {
       width: 55%;
       border-radius: 7px;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 
