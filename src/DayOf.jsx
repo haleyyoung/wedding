@@ -18,7 +18,7 @@ export default function DayOf() {
         </div>
         <div className="text">
           Drive to
-          <Link href="https://goo.gl/maps/so6z2n5h3kZJbGyR6" color="primary" underline="none"> Tenaya Lake</Link>
+          <Link href="https://goo.gl/maps/so6z2n5h3kZJbGyR6" target="_blank" color="primary" underline="none"> Tenaya Lake</Link>
           . You'll need a credit card (no cash accepted) for the $35 entry fee (we'll reimburse you).
           There can often be a line to get in on a Saturday morning, so plan accordingly
         </div>

@@ -37,7 +37,7 @@ export default function YosemiteRules() {
           </div>
         </div>
         <div className="event">
-          <div className="title">Breafkast</div>
+          <div className="title">Breakfast</div>
           <div className="date">
             Sunday July 14, 2024 - 9am<br/>
             June Lake

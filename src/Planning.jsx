@@ -20,19 +20,21 @@ export default function Planning() {
           Hotels/Cabins
         </div>
         <div className="text">
-          {(user?.isFamily || user?.isWeddingParty) && (
-            <div className="alert-stamp">
-              {user?.isWeddingParty && (
-                <div className="group"><span>Wedding party,</span></div>
-              )}
-              {!user?.isWeddingParty && user?.isFamily && (
-                <div className="group"><span>Family,</span></div>
-              )}
-              <span>we gotchu July 12-14</span>
-            </div>
-          )}
           Lodging is <i>extremely</i> limited in the small town of June Lake, so you'll want to book ASAP.
-          <img src={process.env.PUBLIC_URL + "/lodging.jpg"}/>
+          <div>
+            {(user?.isFamily || user?.isWeddingParty) && (
+              <div className="alert-stamp">
+                {user?.isWeddingParty && (
+                  <div className="group"><span>Wedding party,</span></div>
+                )}
+                {!user?.isWeddingParty && user?.isFamily && (
+                  <div className="group"><span>Family,</span></div>
+                )}
+                <span>we gotchu July 12-14</span>
+              </div>
+            )}
+            <img src={process.env.PUBLIC_URL + "/lodging.jpg"}/>
+          </div>
           <div>Here are a few places we'd recommend.</div>
           <br/>
           <Link href="https://www.heidelberginnresort.com/" target="_blank" color="primary" underline="none">

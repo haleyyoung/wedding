@@ -15,7 +15,6 @@ import DayOf from './DayOf.jsx';
 export default function Content({notifyUserChange}) {
   const ref = useRef();
   const isMobile = window?.outerWidth < 601;
-  console.log("window?", isMobile);
 
   const [user, setUser] = useState(useUser());
   const [username, setUsername] = useState('');
@@ -71,35 +70,35 @@ export default function Content({notifyUserChange}) {
             </div>
             <div className="user-form">
               <img className="mountains" src="/mountains.png"/>
-              {(!user || user.isUnrecognizedUser) && (
-                <div className="form-content">
-                  <div>Please let us know who you are, so we can show you relevant information</div>
-                  <div>
-                  <TextField color="secondary" label="Name" variant="outlined" 
-                      sx={{
-                          margin: '15px',
-                          "& .MuiFormLabel-root": {
-                            color: "white",
-                          },
-                          }}
-                      value={username}
-                      onChange={(e) => handleUsernameChange(e.target.value)}
-                  />
-                  <Button className="submit-button" variant="contained" color="secondary" 
-                      sx={{ marginLeft: '15px', marginTop: '25px', '@media (max-width: 700px)': {display: 'block', margin: '0 auto'}}}
-                      onClick={(e) => handleUsernameSubmit(username)} disabled={username?.length < 2}>
-                    Submit
-                  </Button>
-                </div>
-                </div>
-              )}
-              <div className="form-content welcome-back">
-                {user && (
-                  <>
-                  {username && <div>Hi {user.name}!</div>}
-                    <div>Wrong name? <Link onClick={clearUser} color="primary">Log out</Link></div>
-                  </>
-                )}
+              <div className="form-content">
+                <>
+                  {(!user || user.isUnrecognizedUser) && (
+                    <>
+                      <div>Please let us know who you are, so we can show you relevant information</div>
+                      <TextField color="secondary" label="Name" variant="outlined"
+                          sx={{
+                              margin: '15px',
+                              "& .MuiFormLabel-root": {
+                                color: "white",
+                              },
+                              }}
+                          value={username}
+                          onChange={(e) => handleUsernameChange(e.target.value)}
+                      />
+                      <Button className="submit-button" variant="contained" color="secondary"
+                          sx={{ marginLeft: '15px', marginTop: '25px', '@media (max-width: 700px)': {display: 'block', margin: '0 auto'}}}
+                          onClick={(e) => handleUsernameSubmit(username)} disabled={username?.length < 2}>
+                        Submit
+                      </Button>
+                    </>
+                  )}
+                  {user && (
+                    <>
+                    {username && <div>Hi {user.name}!</div>}
+                      <div>Wrong name? <Link onClick={clearUser} color="primary">Log out</Link></div>
+                    </>
+                  )}
+                </>
               </div>
             </div>
           </div>

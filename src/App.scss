@@ -159,6 +159,10 @@ body {
   .page-title {
     font-family: 'DancingScript';
     font-size: 4rem;
+
+    @media(max-width: 600px) {
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -261,6 +265,10 @@ body {
   padding: 100px 0 50px 0;
   font-size: 1.4rem;
 
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
   .mountains {
     max-width: 100%;
   }
@@ -270,7 +278,7 @@ body {
     @media (max-width: 700px) {
       height: 260px;
       margin-bottom: -260px;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 }
@@ -394,7 +402,7 @@ body {
     padding: 3rem;
 
     @media (max-width: 600px) {
-      padding: 0;
+      padding: 3rem 0;
     }
 
     &:first-child {
@@ -486,12 +494,11 @@ body {
     @media(max-width: 600px) {
       margin-top: 0;
       font-size: 1.5rem;
-      top: 50%;
-      left: 10%;
+      left: 0;
     }
 
     .group {
-      line-height: 0.4rem;
+      line-height: 0.8rem;
     }
   }
 
@@ -530,6 +537,10 @@ body {
     img {
       width: 55%;
       border-radius: 7px;
+
+      @media(max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 
@@ -573,6 +584,10 @@ body {
   img {
     width: 50vw;
     border-radius: 7px;
+
+    @media(max-width: 600px) {
+      width: 100%;
+    }
   }
 }
 
