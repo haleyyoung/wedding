@@ -68,7 +68,7 @@ export default function Planning() {
           Camping
         </div>
         <div className="text">
-          <img src={process.env.PUBLIC_URL + "/gullLakeCampground.png"}/><br/>
+          <img src={process.env.PUBLIC_URL + "/camping.png"}/><br/>
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20568" color="primary" underline="none" target="_blank">
             Gull Lake Campground
           </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/>
