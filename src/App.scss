@@ -410,11 +410,12 @@ body {
     }
 
     img {
-      max-width: 100%;
+      max-width: 70%;
       margin: 10px;
       border-radius: 7px;
 
       @media(max-width: 600px) {
+        max-width: 100%;
         margin: 10px 0;
       }
     }
@@ -550,19 +551,8 @@ body {
 }
 
 .yosemite-rules {
-  max-width: 1500px;
   margin: 40px auto;
   padding: 0 40px;
-  font-size: 1.65rem;
-
-  h2 {
-    font-family: 'DancingScript';
-    font-size: 2.5rem;
-
-    @media(max-width: 600px) {
-      font-size: 1.85rem;
-    }
-  }
 
   .content-2-columns {
     height: auto;
@@ -579,6 +569,15 @@ body {
         margin-bottom: 0;
       }
     }
+
+    img {
+      width: 55%;
+      border-radius: 7px;
+
+      @media(max-width: 600px) {
+        width: 100%;
+      }
+    }
   }
 
   img {
@@ -592,7 +591,6 @@ body {
 }
 
 .registry {
-  max-width: 1500px;
   font-size: 1.4rem;
   font-family: 'Cabin';
   margin: 40px auto;

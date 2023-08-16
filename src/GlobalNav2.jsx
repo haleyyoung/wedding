@@ -143,7 +143,7 @@ export default function DrawerAppBar(userChanged) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              background: 'linear-gradient(139deg, rgba(121,9,111,1) 0%, #973250 66%, rgba(208,128,24,1) 100%)',
+              background: 'linear-gradient(139deg, #5f0758 0%, #973250 66%, rgba(208,128,24,1) 100%)',
               color: 'white'
             },
           }}

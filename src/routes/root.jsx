@@ -15,7 +15,7 @@ export default function Root(userChanged) {
         secondary: '#FAB903',
       },
       primary: {
-        main: '#c0268f',
+        main: '#951d6f',
         contrastText: '#000033',
       },
       secondary: {

@@ -90,6 +90,7 @@ export default function Planning() {
             <div className="sub-title">
               Flying
             </div>
+            <img src={process.env.PUBLIC_URL + "/flying.png"}/><br/>
             <div className="text">
               {"The closest airport is "}
               <Link href="https://goo.gl/maps/GNu2TH6FhzWes2Hr7" color="primary" underline="none" target="_blank">Reno International Airport</Link>,
@@ -102,6 +103,7 @@ export default function Planning() {
             <div className="sub-title">
               Driving
             </div>
+            <img src={process.env.PUBLIC_URL + "/driving.png"}/><br/>
             <div className="text">
               Coming from San Diego, the 395 will be your best friend for the better part of a 6 <span className="fraction">1/2</span> hour drive.
             </div>
@@ -132,6 +134,11 @@ export default function Planning() {
           <Link href="https://www.travelyosemite.com/lodging/the-ahwahnee/" target="_blank" color="primary" underline="none">
             The Ahwahnee
           </Link>
+        </div>
+        <div className="note">
+          Important note: The 120 didn't open until the end of July in 2023. If this happens again,
+          we will have no access to Yosemite from the Eastern Sierras and will have to hold our ceremony
+          somewhere else. Make sure you have a tentative backup plan for any Yosemite travel plans you may make.
         </div>
       </Box>
       <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
