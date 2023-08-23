@@ -163,7 +163,7 @@ export default function Content({notifyUserChange}) {
         </div>
       </div>
     </Modal>
-    <Parallax className="parallax App" pages={2.55} ref={ref}>
+    <Parallax className="parallax App" pages={2} ref={ref}>
       <ParallaxLayer sticky={{start: 0, end: 0.75}}>
         <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
           <div className="image-1"></div>
