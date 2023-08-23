@@ -14,7 +14,7 @@ import WeddingParty from './WeddingParty.jsx';
 import Root from "./routes/root.jsx";
 
 function App() {
-  const [userChanged, setUserChanged] = useState(false);
+  const [userChanged, setUserChanged] = useState(null);
   const router = createBrowserRouter([
     {
       path: "/",

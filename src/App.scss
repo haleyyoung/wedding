@@ -260,26 +260,62 @@ body {
 .user-form {
   max-width: 800px;
   width: 55vw;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 100px 0 50px 0;
+  //margin: auto;
+  //margin-bottom: 20px;
+  //padding: 100px 0 50px 0;
   font-size: 1.4rem;
+  background: #000033;
+  transform: translateY(50%);
+
+  margin: 20px auto;
+  padding: 3rem;
+  border-radius: 10px;
+  outline: none;
 
   @media (max-width: 700px) {
-    width: 100%;
+    width: 90%;
+    left: 5%;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .mountains {
     max-width: 100%;
   }
   .form-content {
-    height: 180px;
+    //height: 180px;
+    font-family: "Cabin";
+    text-align: center;
+    color: 'white';
 
     @media (max-width: 700px) {
-      height: 260px;
-      margin-bottom: -260px;
+      //height: 260px;
+      //margin-bottom: -260px;
       font-size: 1rem;
+
+      .submit-button {
+        margin-top: 10px;
+      }
     }
+
+    .wrong-password {
+      height: 1.4rem;
+      color: #922B56;
+    }
+
+    .password {
+      //width: 200px;
+    }
+  }
+}
+
+.logout {
+  padding: 20px;
+  img {
+    max-width: 100%;
   }
 }
 
@@ -532,6 +568,11 @@ body {
     .title {
       font-family: 'Sansita';
       font-size: 2rem;
+    }
+    .sub-title {
+      font-family: 'Sansita';
+      font-size: 1.3rem;
+      margin: 10px 0;
     }
   }
   .content-2-columns {

@@ -20,7 +20,7 @@ export default function YosemiteRules() {
       <div className="content-2-columns">
         <img className="image" src={process.env.PUBLIC_URL + "/chair.jpg"}/>
         <div className="order-2">
-          No chairs at the ceremony, sanding room only (except elderly people - aka Haley's 93 year old Grandpa 😉)
+          No chairs at the ceremony, standing room only
         </div>
       </div>
       <div className="content-2-columns">

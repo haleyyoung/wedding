@@ -6,6 +6,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: true,
+    password: 'stickz',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Teresa',
@@ -14,6 +16,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'pumpkin',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Ralph',
@@ -22,6 +26,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'pumpkin',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Hunter',
@@ -30,6 +36,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'pranksonmom',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Hailey',
@@ -38,6 +46,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'pranksonmom',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Erwin',
@@ -45,6 +55,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'thelegend',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Sharon',
@@ -52,6 +64,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'hummingbird',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Alex',
@@ -60,13 +74,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: true,
-  },
-  {
-    name:'Randy',
-    isFamily: false,
-    isWeddingParty: false,
-    isDriving: true,
-    isFlying: true,
+    password: 'sneeze!where?',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Garrison',
@@ -75,6 +84,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: true,
+    password: 'haleydoesntknow',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Anne',
@@ -83,6 +94,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'sassycooper',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Gary',
@@ -90,6 +103,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'sassycooper',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Barb',
@@ -97,6 +112,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'rootbeer',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Barbara',
@@ -104,6 +121,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'rootbeer',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Danny',
@@ -111,6 +130,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'rootbeer',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Daniel',
@@ -118,6 +139,8 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    password: 'rootbeer',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Katelyn',
@@ -126,6 +149,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: false,
     isFlying: false,
+    password: 'bananaslug',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Meggie',
@@ -134,6 +159,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'chomo',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Meaghan',
@@ -142,6 +169,8 @@ const invitedGuests = [
     isBridesmaid: true,
     isDriving: true,
     isFlying: false,
+    password: 'chomo',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Justin',
@@ -149,6 +178,8 @@ const invitedGuests = [
     isWeddingParty: true,
     isDriving: true,
     isFlying: false,
+    password: 'beanbagflute',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Mallory',
@@ -156,6 +187,8 @@ const invitedGuests = [
     isWeddingParty: true,
     isDriving: true,
     isFlying: false,
+    password: 'beanbagflute',
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Monic',
@@ -163,6 +196,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Joel',
@@ -170,6 +204,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Katy',
@@ -177,6 +212,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Jamie',
@@ -184,6 +220,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Kevin',
@@ -191,6 +228,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Courtney',
@@ -198,6 +236,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Cory',
@@ -205,6 +244,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Lydia',
@@ -212,6 +252,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Emma',
@@ -219,6 +260,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: false,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Israel',
@@ -226,13 +268,16 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Sandra',
+    lastName: 'Davila',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Garrett',
@@ -240,6 +285,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: false,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Susanna',
@@ -247,6 +293,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: false,
     isFlying: true,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Nicole',
@@ -254,6 +301,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
   {
     name:'Leif',
@@ -261,6 +309,7 @@ const invitedGuests = [
     isWeddingParty: false,
     isDriving: true,
     isFlying: false,
+    rsvpDate: 'November 1, 2023',
   },
 ];
 

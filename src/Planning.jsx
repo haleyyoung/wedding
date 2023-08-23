@@ -79,7 +79,10 @@ export default function Planning() {
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20562" color="primary" underline="none" target="_blank">
             Hartley Springs campground
           </Link>
-          <div className="details">You can ride your OHV straight out of camp!</div>
+          <Link href="https://goo.gl/maps/zmZbQhUobgUe3MX98" color="primary" underline="none" target="_blank">
+            Owens River Road
+          </Link>
+          <div className="details">Free camping and you can ride your OHV here as well!</div>
         </div>
       </Box>
       <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>
