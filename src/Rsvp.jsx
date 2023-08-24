@@ -12,9 +12,11 @@ export default function Rsvp() {
       <div className="page-title">
         RSVP
       </div>
-      <div className="note">
-        Please RSVP via mail by {user.rsvpDate}.
-      </div>
+      {user && (
+        <div className="note">
+          Please RSVP via mail by {user.rsvpDate}.
+        </div>
+      )}
       <img src={process.env.PUBLIC_URL + "/rsvp.jpg"}/>
     </div>
   );
