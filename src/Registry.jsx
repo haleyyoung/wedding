@@ -15,8 +15,8 @@ export default function Registry() {
         <div className="note">
           Please don't feel obligated to bring a gift, we know it will be enough of an effort to come to our wedding.
         </div>
-        We haven't signed up for any registries. We're well-established in our house
-        and don't need kitchen trinkets and such. That being said, we are saving up for a few things.
+        We haven't signed up for any registries. We've been in our house for a while now
+        and don't need anything. If you feel inclined, we are saving up for a few things.
       </div>
       <div className="content-2-columns">
         <div className="item order-2">A Winter vacation at the Ahwahnee Hotel in Yosemite</div>

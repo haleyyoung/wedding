@@ -29,12 +29,11 @@ export default function YosemiteRules() {
         </div>
         <div className="event">
           <div className="title">Wedding!</div>
-          <div className="sub-title">Ceremony</div>
           <div className="date">
             Saturday July 13, 2024 - 5am - 11am<br/>
             Yosemite - Tenaya Lake<br/>
           </div>
-          <div className="sub-title">Dessert Bar</div>
+          <br/>
           <div className="date">
             7pm - 10pm<br/>
             June Lake

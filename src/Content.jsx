@@ -188,11 +188,9 @@ export default function Content({notifyUserChange}) {
               <div className="tenaya"><img src="/tenayaLakeSunset.jpg"/></div>
               <div className="disclaimer">
                 We're going on an adventure for our wedding, and we'd love if you'd
-                join us, but we also know that this is, by no means, a traditional
-                wedding. Please check out the pages here for all the info, and if -
-                for whatever reason - you'd rather not come, we encourage you to
-                choose for yourself, knowing there will be no hard feelings
-                on our end.
+                join us. We know that this is, by no means, a traditional
+                wedding so please check out the pages here for all the info. If -
+                for whatever reason - you can't come, we understand.
                 <div className="signature">- Haley and Garrison</div>
               </div>
             </div>
