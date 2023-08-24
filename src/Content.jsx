@@ -91,6 +91,11 @@ export default function Content({notifyUserChange}) {
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       <div className="user-form">
         <img className="mountains" src="/mountains.png"/>
@@ -126,7 +131,7 @@ export default function Content({notifyUserChange}) {
                     aria-label="toggle password visibility"
                     onClick={() => setShowPassword(!showPassword)}
                     edge="end"
-                    sx={{'& .MuiSvgIcon-root': {position: 'fixed', marginRight: '50px'}}}
+                    sx={{'& .MuiSvgIcon-root': {position: 'absolute', marginRight: '50px'}}}
                   >
                     {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
                   </IconButton>
