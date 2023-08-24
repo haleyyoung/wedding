@@ -681,3 +681,21 @@ body {
     max-width: 100%;
   }
 }
+
+.rsvp {
+  .note {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: #ffaa00;
+  }
+
+  img {
+    width: 55%;
+    border-radius: 7px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}

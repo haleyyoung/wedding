@@ -34,6 +34,7 @@ export default function DrawerAppBar(userChanged) {
   ];
   const protectedNavItems = [
     {text: user?.isWeddingParty ? "Wedding Party" : "Family", location: "/wedding-party"},
+    {text: "Rsvp", location: "/rsvp"},
   ];
 
   useEffect(() => {
@@ -66,12 +67,12 @@ export default function DrawerAppBar(userChanged) {
             </ListItemButton>
           </ListItem>
         ))}
-        {isWeddingParty && protectedNavItems.map((item) => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
+        {isWeddingParty && (
+          <ListItem key={protectedNavItems[0].text} disablePadding>
+            <ListItemButton to={protectedNavItems[0].location} sx={{ textAlign: 'center' }}>
               <ListItemText
-                primary={item.text}
-                sx={item.location == activeTab && {
+                primary={protectedNavItems[0].text}
+                sx={protectedNavItems[0].location == activeTab && {
                   ['& span']: {
                     width: 'fit-content',
                     margin: 'auto',
@@ -81,7 +82,23 @@ export default function DrawerAppBar(userChanged) {
               />
             </ListItemButton>
           </ListItem>
-        ))}
+        )}
+        {user && !user.isUnrecognizedUser && (
+          <ListItem key={protectedNavItems[1].text} disablePadding>
+            <ListItemButton to={protectedNavItems[1].location} sx={{ textAlign: 'center' }}>
+              <ListItemText
+                primary={protectedNavItems[1].text}
+                sx={protectedNavItems[1].location == activeTab && {
+                  ['& span']: {
+                    width: 'fit-content',
+                    margin: 'auto',
+                    borderBottom: '2px solid white',
+                  }
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+        )}
       </List>
     </Box>
   );
@@ -121,11 +138,29 @@ export default function DrawerAppBar(userChanged) {
                 {item.text}
               </Button>
             ))}
-            {isWeddingParty && protectedNavItems.map((item) => (
-              <Button className={item.location == activeTab && 'active'} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
-                {item.text}
+            {user && !user.isUnrecognizedUser && (
+              <Button
+                className={protectedNavItems[1].location == activeTab && 'active'}
+                key={protectedNavItems[1].text}
+                component={Link}
+                to={protectedNavItems[1].location}
+                sx={{ color: '#fff' }}
+                onClick={() => handleNavChange(protectedNavItems[1].location)}
+              >
+                {protectedNavItems[1].text}
               </Button>
-            ))}
+            )}
+            {isWeddingParty && (
+              <Button
+                className={protectedNavItems[0].location == activeTab && 'active'}
+                key={protectedNavItems[0].text}
+                component={Link}
+                to={protectedNavItems[0].location}
+                sx={{ color: '#fff' }}
+                onClick={() => handleNavChange(protectedNavItems[0].location)}>
+                {protectedNavItems[0].text}
+              </Button>
+            )}
           </Box>
         </Toolbar>
       </AppBar>

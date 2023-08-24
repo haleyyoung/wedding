@@ -324,7 +324,7 @@ export function storeUser(name) {
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
-    isUnrecognisedUser: true,
+    isUnrecognizedUser: true,
   };
   localStorage.setItem('user', user.name);
   return user;
@@ -346,6 +346,6 @@ export default function useUser() {
     isWeddingParty: false,
     isDriving: true,
     isFlying: true,
-    isUnrecognisedUser: true,
+    isUnrecognizedUser: true,
   };
 };

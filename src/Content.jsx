@@ -37,6 +37,7 @@ export default function Content({notifyUserChange}) {
       else {
         storeUser(name);
         setUser(invitedGuest);
+        notifyUserChange(invitedGuest);
         setOpen(false);
       }
     }
@@ -53,6 +54,7 @@ export default function Content({notifyUserChange}) {
     setOpen(false);
     const storedUser = storeUser(uppercaseNames(name));
     setUser(storedUser);
+    notifyUserChange(storedUser);
   }
 
   const handlePasswordChange = (password) => {
