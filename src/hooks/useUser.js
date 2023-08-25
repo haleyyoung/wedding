@@ -1,6 +1,7 @@
 const invitedGuests = [
   {
     name:'Haley',
+    lastName: 'Young',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -11,6 +12,7 @@ const invitedGuests = [
   },
   {
     name:'Teresa',
+    lastName: 'Young',
     isFamily: true,
     isWeddingParty: false,
     isBridesmaid: true,
@@ -21,6 +23,7 @@ const invitedGuests = [
   },
   {
     name:'Ralph',
+    lastName: 'Young',
     isFamily: true,
     isWeddingParty: false,
     isBridesmaid: true,
@@ -31,6 +34,7 @@ const invitedGuests = [
   },
   {
     name:'Hunter',
+    lastName: 'Young',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -41,6 +45,7 @@ const invitedGuests = [
   },
   {
     name:'Hailey',
+    lastName: 'Young',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -51,6 +56,7 @@ const invitedGuests = [
   },
   {
     name:'Erwin',
+    lastName: 'White',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -60,6 +66,7 @@ const invitedGuests = [
   },
   {
     name:'Sharon',
+    lastName: 'Davenport',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -69,6 +76,7 @@ const invitedGuests = [
   },
   {
     name:'Alex',
+    lastName: 'Andrews',
     isFamily: false,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -79,6 +87,7 @@ const invitedGuests = [
   },
   {
     name:'Garrison',
+    lastName: 'Rios',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -89,6 +98,7 @@ const invitedGuests = [
   },
   {
     name:'Anne',
+    lastName: 'Harjer',
     isFamily: true,
     isWeddingParty: false,
     isBridesmaid: true,
@@ -99,6 +109,7 @@ const invitedGuests = [
   },
   {
     name:'Gary',
+    lastName: 'Sexton',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -108,6 +119,7 @@ const invitedGuests = [
   },
   {
     name:'Barb',
+    lastName: 'Sprofera',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -117,6 +129,7 @@ const invitedGuests = [
   },
   {
     name:'Barbara',
+    lastName: 'Sprofera',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -126,6 +139,7 @@ const invitedGuests = [
   },
   {
     name:'Danny',
+    lastName: 'Rios',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -135,6 +149,7 @@ const invitedGuests = [
   },
   {
     name:'Daniel',
+    lastName: 'Rios',
     isFamily: true,
     isWeddingParty: false,
     isDriving: true,
@@ -144,16 +159,18 @@ const invitedGuests = [
   },
   {
     name:'Katelyn',
+    lastName: 'Sprofera',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
-    isDriving: false,
-    isFlying: false,
+    isDriving: true,
+    isFlying: true,
     password: 'bananaslug',
     rsvpDate: 'November 1, 2023',
   },
   {
     name:'Meggie',
+    lastName: 'Rios',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -164,6 +181,7 @@ const invitedGuests = [
   },
   {
     name:'Meaghan',
+    lastName: 'Rios',
     isFamily: true,
     isWeddingParty: true,
     isBridesmaid: true,
@@ -174,6 +192,7 @@ const invitedGuests = [
   },
   {
     name:'Justin',
+    lastName: 'Wilson',
     isFamily: false,
     isWeddingParty: true,
     isDriving: true,
@@ -183,6 +202,7 @@ const invitedGuests = [
   },
   {
     name:'Mallory',
+    lastName: 'Wilson',
     isFamily: false,
     isWeddingParty: true,
     isDriving: true,
@@ -192,6 +212,7 @@ const invitedGuests = [
   },
   {
     name:'Monic',
+    lastName: 'Tando',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -200,6 +221,7 @@ const invitedGuests = [
   },
   {
     name:'Joel',
+    lastName: 'Eslinger',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -208,6 +230,7 @@ const invitedGuests = [
   },
   {
     name:'Katy',
+    lastName: 'Hawkins',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -216,6 +239,7 @@ const invitedGuests = [
   },
   {
     name:'Jamie',
+    lastName: 'Hawkins',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -224,6 +248,7 @@ const invitedGuests = [
   },
   {
     name:'Kevin',
+    lastName: 'Wake',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -232,6 +257,16 @@ const invitedGuests = [
   },
   {
     name:'Courtney',
+    lastName: 'Peterson',
+    isFamily: false,
+    isWeddingParty: false,
+    isDriving: true,
+    isFlying: false,
+    rsvpDate: 'November 1, 2023',
+  },
+  {
+    name:'Courtney',
+    lastName: 'Wake',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -240,6 +275,7 @@ const invitedGuests = [
   },
   {
     name:'Cory',
+    lastName: 'Henry',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -248,6 +284,7 @@ const invitedGuests = [
   },
   {
     name:'Lydia',
+    lastName: 'Bumpous',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -256,14 +293,16 @@ const invitedGuests = [
   },
   {
     name:'Emma',
+    lastName: 'Barbian',
     isFamily: false,
     isWeddingParty: false,
-    isDriving: false,
+    isDriving: true,
     isFlying: true,
     rsvpDate: 'November 1, 2023',
   },
   {
     name:'Israel',
+    lastName: 'Davila',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -281,6 +320,7 @@ const invitedGuests = [
   },
   {
     name:'Garrett',
+    lastName: 'Trummer',
     isFamily: false,
     isWeddingParty: false,
     isDriving: false,
@@ -289,6 +329,7 @@ const invitedGuests = [
   },
   {
     name:'Susanna',
+    lastName: 'Shivers',
     isFamily: false,
     isWeddingParty: false,
     isDriving: false,
@@ -297,6 +338,7 @@ const invitedGuests = [
   },
   {
     name:'Nicole',
+    lastName: 'Ryan',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -305,6 +347,7 @@ const invitedGuests = [
   },
   {
     name:'Leif',
+    lastName: 'Ryan',
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -313,13 +356,16 @@ const invitedGuests = [
   },
 ];
 
-export function findInvitedGuest(name) {
-  return invitedGuests.find((guest) => guest.name.toLowerCase() === name.toLowerCase());
+export function findInvitedGuest(name, lastName) {
+  return invitedGuests.find((guest) => {
+    return guest.name.toLowerCase() === name.toLowerCase() && guest.lastName.toLowerCase() === lastName?.toLowerCase();
+  });
 }
 
-export function storeUser(name) {
-  const user = findInvitedGuest(name) || {
-    name,
+export function storeUser(firstName, lastName) {
+  const user = findInvitedGuest(firstName, lastName) || {
+    name: firstName,
+    lastName,
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,
@@ -327,21 +373,25 @@ export function storeUser(name) {
     isUnrecognizedUser: true,
   };
   localStorage.setItem('user', user.name);
+  localStorage.setItem('userLastName', user.lastName);
   return user;
 }
 
 export function removeUser() {
   localStorage.removeItem('user');
+  localStorage.removeItem('userLastName');
 }
 
 export default function useUser() {
   const username = localStorage.getItem('user');
+  const lastName = localStorage.getItem('userLastName');
   if (!username) {
     return null;
   }
-  const user = findInvitedGuest(username);
+  const user = findInvitedGuest(username, lastName);
   return user || {
     name: username,
+    lastName: lastName,
     isFamily: false,
     isWeddingParty: false,
     isDriving: true,

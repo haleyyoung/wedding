@@ -21,6 +21,7 @@ export default function Content({notifyUserChange}) {
   const [user, setUser] = useState(useUser());
   const [passwordRequired, setPasswordRequired] = useState(false);
   const [username, setUsername] = useState('');
+  const [lastname, setLastname] = useState('');
   const [potentialUser, setPotentialUser] = useState(null);
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -28,14 +29,14 @@ export default function Content({notifyUserChange}) {
   const [open, setOpen] = useState(!user);
 
   const handleUsernameChange = (name) => {
-    const invitedGuest = findInvitedGuest(name);
+    const invitedGuest = findInvitedGuest(name, lastname);
     if (invitedGuest) {
       if (invitedGuest.isWeddingParty || invitedGuest.isFamily) {
         setPotentialUser(invitedGuest);
         setPasswordRequired(true);
       }
       else {
-        storeUser(name);
+        storeUser(name, lastname);
         setUser(invitedGuest);
         notifyUserChange(invitedGuest);
         setOpen(false);
@@ -44,15 +45,32 @@ export default function Content({notifyUserChange}) {
     setUsername(name);
   }
 
+  const handleLastnameChange = (name) => {
+    const invitedGuest = findInvitedGuest(username, name);
+    if (invitedGuest) {
+      if (invitedGuest.isWeddingParty || invitedGuest.isFamily) {
+        setPotentialUser(invitedGuest);
+        setPasswordRequired(true);
+      }
+      else {
+        storeUser(username, name);
+        setUser(invitedGuest);
+        notifyUserChange(invitedGuest);
+        setOpen(false);
+      }
+    }
+    setLastname(name);
+  }
+
   const uppercaseNames = (name) => {
     return name.split(" ").map((namePart) => {
       return namePart.charAt(0).toUpperCase() + namePart.slice(1);
     }).join(" ");
   }
 
-  const handleUsernameSubmit = (name) => {
+  const handleUsernameSubmit = (name, name2) => {
     setOpen(false);
-    const storedUser = storeUser(uppercaseNames(name));
+    const storedUser = storeUser(uppercaseNames(name), uppercaseNames(name2));
     setUser(storedUser);
     notifyUserChange(storedUser);
   }
@@ -62,7 +80,7 @@ export default function Content({notifyUserChange}) {
     setWrongPassword(false);
     if (password.toLowerCase() === potentialUser.password) {
       notifyUserChange(potentialUser);
-      storeUser(potentialUser.name);
+      storeUser(potentialUser.name, potentialUser.lastName);
       setUser(potentialUser);
       setPasswordRequired(false);
       setOpen(false);
@@ -73,6 +91,7 @@ export default function Content({notifyUserChange}) {
     setUser(null);
     removeUser();
     setUsername('');
+    setLastname('');
     notifyUserChange(null);
     setPotentialUser(null);
     setPassword('');
@@ -97,6 +116,7 @@ export default function Content({notifyUserChange}) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        position: 'absolute',
       }}
     >
       <div className="user-form">
@@ -112,6 +132,17 @@ export default function Content({notifyUserChange}) {
                   }}
               value={username}
               onChange={(e) => handleUsernameChange(e.target.value)}
+              disabled={passwordRequired}
+          />
+          <TextField color="secondary" label="Last Name" variant="outlined"
+              sx={{
+                  margin: '15px',
+                  "& .MuiFormLabel-root": {
+                    color: "white",
+                  },
+                  }}
+              value={lastname}
+              onChange={(e) => handleLastnameChange(e.target.value)}
               disabled={passwordRequired}
           />
           {passwordRequired && (
@@ -149,7 +180,7 @@ export default function Content({notifyUserChange}) {
           {!potentialUser && (
             <Button className="submit-button" variant="contained" color="secondary"
                 sx={{ marginLeft: '15px', marginTop: '25px', '@media (max-width: 700px)': {display: 'block', margin: '0 auto'}}}
-                onClick={(e) => handleUsernameSubmit(username)} disabled={username?.length < 2}>
+                onClick={(e) => handleUsernameSubmit(username, lastname)} disabled={username?.length < 2 || lastname?.length < 2}>
               Submit
             </Button>
           )}
