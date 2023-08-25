@@ -205,6 +205,7 @@ export default function Content({notifyUserChange}) {
       <ParallaxLayer sticky={{start: 0, end: 0.75}}>
         <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
           <div className="image-1"></div>
+          <img className="chevron" src="/chevron.gif"/>
           <div className="navy-background content">
             <div className="text">
               Tenaya Lake<span className="font-change">,</span> Yosemite <br/>

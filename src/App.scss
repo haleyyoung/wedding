@@ -178,6 +178,13 @@ body {
   z-index: 5;
 }
 
+.chevron {
+    position: absolute;
+    height: 3rem;
+    margin-top: -4rem;
+    left: 0;
+}
+
 .image-1 {
   background-image: url("../public/sunsetLayers1.png");
 
