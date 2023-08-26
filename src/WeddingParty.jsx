@@ -51,7 +51,7 @@ export default function YosemiteRules() {
       <Box>
         <div className="page-title">Lodging</div>
         <div className="content-2-columns">
-          <img src={process.env.PUBLIC_URL + "/airbnb.png"}/>
+          <img src={process.env.PUBLIC_URL + "/airbnb.jpg"}/>
           <Box className="airbnb-text">
             <p>The wedding party and immediate family will be staying in a couple AirBnbs
             we've reserved in June Lake, so no need to worry about lodging for Friday/Saturday nights July 12/13.</p>

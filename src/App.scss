@@ -689,7 +689,7 @@ body {
   }
 }
 
-.rsvp {
+.rsvp, .not-found {
   .note {
     padding-top: 3rem;
     padding-bottom: 1rem;
@@ -700,6 +700,7 @@ body {
   img {
     width: 55%;
     border-radius: 7px;
+    margin-top: 1rem;
 
     @media (max-width: 600px) {
       width: 100%;

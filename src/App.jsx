@@ -12,6 +12,7 @@ import Planning from './Planning.jsx';
 import Registry from './Registry.jsx';
 import Rsvp from './Rsvp.jsx';
 import WeddingParty from './WeddingParty.jsx';
+import NotFound from './NotFound.jsx';
 import Root from "./routes/root.jsx";
 
 function App() {
@@ -84,6 +85,16 @@ function App() {
         {
           path: "",
           element: <WeddingParty />,
+        },
+      ],
+    },
+    {
+      path: "/",
+      element: <Root/>,
+      children: [
+        {
+          path: "*",
+          element: <NotFound />
         },
       ],
     },
