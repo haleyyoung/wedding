@@ -174,6 +174,27 @@ export default function Planning() {
           </Link> literally everywhere! (be bear aware)
         </div>
       </Box>
+      {user && !user?.isFamily && !user?.isWeddingParty && (
+        <>
+          <img className="separator" src={process.env.PUBLIC_URL + "/mountains.png"}/>
+          <Box className="section">
+            <div className="title">
+              Important Locations
+            </div>
+            <div className="text">
+              Here's a <Link
+                href="https://www.google.com/maps/dir/Yosemite+National+Park,+Tioga+Pass+Entrance,+Tioga+Road,+Lee+Vining,+CA/Tenaya+Lake+Picnic+Area,+California/Yosemite+Valley+Lodge,+Yosemite+Lodge+Drive,+YOSEMITE+NATIONAL+PARK,+CA/37.7790657,-119.0823915/@37.8329868,-119.5941931,11z/data=!3m1!4b1!4m21!4m20!1m5!1m1!1s0x80965a98e360b9b5:0x6ef6c5376cba1f84!2m2!1d-119.2578956!2d37.9107024!1m5!1m1!1s0x8096f7bb2665db4b:0x1f631accddeea98b!2m2!1d-119.451885!2d37.8379632!1m5!1m1!1s0x8096910208695e7b:0x731e8f9ad23d2d15!2m2!1d-119.5982519!2d37.7434762!1m0!3e0?entry=ttu"
+                target="_blank"
+                color="primary"
+                underline="none"
+              >map
+              </Link> of the commute between our Airbnb, the Yosemite Gate, Tenaya Lake and Yosemite Valley.
+              <br/>
+              <img src={process.env.PUBLIC_URL + "/map.png"}/>
+            </div>
+          </Box>
+        </>
+      )}
     </div>
   );
 };

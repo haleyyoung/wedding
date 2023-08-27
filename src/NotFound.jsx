@@ -13,11 +13,9 @@ export default function NotFound() {
       <div className="page-title">
         Not Found
       </div>
-      {user && (
-        <div>
-          How'd you get here? Don't get too lost in the trees!
-        </div>
-      )}
+      <div>
+        How'd you get here? Don't get too lost in the trees!
+      </div>
       <img src={process.env.PUBLIC_URL + "/moose.png"}/>
     </div>
   );
