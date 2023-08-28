@@ -27,7 +27,7 @@ export default function YosemiteRules() {
         <img className="image order-2" src={process.env.PUBLIC_URL + "/picnic.jpg"}/>
         <div>
           We can only comandeer <i>one</i> picnic table. Please be prepared to sit on the sand for breakfast.
-          We'll have picnic blankes for everyone to use.
+          We'll have picnic blankets for everyone to use.
         </div>
       </div>
     </div>
