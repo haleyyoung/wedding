@@ -98,6 +98,7 @@ export default function Planning() {
             </div>
             <img src={process.env.PUBLIC_URL + "/flying.png"}/><br/>
             <div className="text">
+              <div className="note">We'll be in the <b>Eastern</b> Sierras</div>
               <Link href="https://goo.gl/maps/GNu2TH6FhzWes2Hr7" color="primary" underline="none" target="_blank">Reno International Airport</Link>
               <div className="details">
                 They'll have the most flights. Reno is a 3 hour drive to June Lake.
@@ -106,9 +107,9 @@ export default function Planning() {
               <div className="details">
                 Check with United Airlines. Bishop and is a 1 hour drive to June Lake.
               </div>
-              <Link href="https://maps.app.goo.gl/pjYhGUg53RsNbHFx9" color="primary" underline="none" target="_blank">Carlsbad</Link>
+              <Link href="https://maps.app.goo.gl/zP5ucRRuELhsRTeDA" color="primary" underline="none" target="_blank">Carlsbad</Link>
               {" to "}
-              <Link href="https://maps.app.goo.gl/fFWLRnukE8KLUtaP7" color="primary" underline="none" target="_blank">Mammoth</Link>
+              <Link href="https://maps.app.goo.gl/fto6EeYBSrkvZjq79" color="primary" underline="none" target="_blank">Mammoth</Link>
               <div className="details">
                 {"Check with "}
                 <Link href="https://advancedairlines.com/" color="primary" underline="none" target="_blank">Advanced Airlines</Link>.
