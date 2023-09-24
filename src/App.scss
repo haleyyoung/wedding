@@ -264,6 +264,10 @@ body {
   }
 }
 
+.modal {
+  height: 100%;
+}
+
 .user-form, .modal {
   max-width: 800px;
   width: 55vw;
@@ -318,6 +322,9 @@ body {
   }
 
   .modal-content {
+    height: 100%;
+    overflow: scroll;
+
     .title {
       font-family: 'DancingScript';
       font-size: 3rem;

@@ -10,7 +10,6 @@ export default function DressShoping({handleClose}: props) {
       sx={{
         top: '3rem',
         bottom: '3rem',
-        overflow: 'scroll',
       }}
     >
       <div className="modal">
