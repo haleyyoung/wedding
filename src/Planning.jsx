@@ -76,6 +76,9 @@ export default function Planning() {
           <Link href="https://goldenpinervpark.com/" color="primary" underline="none" target="_blank">
             Golden Pine RV Park
           </Link> <img className="marker" src={process.env.PUBLIC_URL + "/treeMarker.png"}/><br/>
+          <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20576" color="primary" underline="none" target="_blank">
+            Oh Ridge Campground
+          </Link><br/>
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20562" color="primary" underline="none" target="_blank">
             Hartley Springs campground
           </Link>
@@ -95,9 +98,21 @@ export default function Planning() {
             </div>
             <img src={process.env.PUBLIC_URL + "/flying.png"}/><br/>
             <div className="text">
-              {"The closest airport is "}
-              <Link href="https://goo.gl/maps/GNu2TH6FhzWes2Hr7" color="primary" underline="none" target="_blank">Reno International Airport</Link>,
-              a 3 hour drive from June Lake. We'll be in the <i>Eastern</i> Sierras.
+              <Link href="https://goo.gl/maps/GNu2TH6FhzWes2Hr7" color="primary" underline="none" target="_blank">Reno International Airport</Link>
+              <div className="details">
+                They'll have the most flights. Reno is a 3 hour drive to June Lake.
+              </div>
+              <Link href="https://maps.app.goo.gl/mDKw51wksAFUHJdZA" color="primary" underline="none" target="_blank">Bishop Airport</Link>
+              <div className="details">
+                Check with United Airlines. Bishop and is a 1 hour drive to June Lake.
+              </div>
+              <Link href="https://maps.app.goo.gl/pjYhGUg53RsNbHFx9" color="primary" underline="none" target="_blank">Carlsbad</Link>
+              {" to "}
+              <Link href="https://maps.app.goo.gl/fFWLRnukE8KLUtaP7" color="primary" underline="none" target="_blank">Mammoth</Link>
+              <div className="details">
+                {"Check with "}
+                <Link href="https://advancedairlines.com/" color="primary" underline="none" target="_blank">Advanced Airlines</Link>.
+              </div>
             </div>
           </>
         )}
