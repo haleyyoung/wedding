@@ -35,7 +35,7 @@ export default function DressShoping({handleClose}: props) {
             <div className="time">9:30 - 10:30am</div>
             La Mesa<br/>
             <Link
-              href="https://www.google.com/maps/place/Prevue+Formal+and+Bridal/@32.7791048,-117.0144466,17z/data=!3m1!4b1!4m6!3m5!1s0x80d95712c182c00b:0xb0c72ec8ebbffa78!8m2!3d32.7791048!4d-117.0118717!16s%2Fg%2F1tcwg85h?entry=ttu"
+              href="https://maps.app.goo.gl/2qUby4pJeB19s8yL7"
               target="_blank"
               color="primary"
               underline="none"
@@ -54,7 +54,7 @@ export default function DressShoping({handleClose}: props) {
             <div className="time">2 - 3:30pm</div>
             Oceanside<br/>
             <Link
-              href="https://www.google.com/maps/place/NATTY+BELLA+BRIDAL+COUTURE/@33.189859,-117.3620621,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc71789bddf70b:0x8a51a0c8c7ec8735!8m2!3d33.189859!4d-117.3594872!16s%2Fg%2F11jptbhq5l?entry=ttu"
+              href="https://maps.app.goo.gl/Gh9ya6N7t7AuXQP79"
               target="_blank"
               color="primary"
               underline="none"
@@ -70,7 +70,7 @@ export default function DressShoping({handleClose}: props) {
             <div className="time">6 - 8pm</div>
             Menifee<br/>
             <Link
-              href="https://www.google.com/maps/place/Vanessa+Alfaro+Bridal+%26+Couture+(By+Appointment+only)/@33.6465016,-117.1390414,17z/data=!3m1!4b1!4m6!3m5!1s0x80db63d854b51463:0x5636d7530d41756a!8m2!3d33.6465016!4d-117.1364665!16s%2Fg%2F11h_sczj_2?entry=ttu"
+              href="https://maps.app.goo.gl/Ry9nXMgSAp48Zi429"
               target="_blank"
               color="primary"
               underline="none"
