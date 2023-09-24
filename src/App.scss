@@ -264,13 +264,13 @@ body {
   }
 }
 
-.user-form {
+.user-form, .modal {
   max-width: 800px;
   width: 55vw;
   font-size: 1.4rem;
   background: #000033;
-
-  //margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 3rem;
   border-radius: 10px;
   outline: none;
@@ -285,10 +285,10 @@ body {
   .mountains {
     max-width: 100%;
   }
-  .form-content {
+  .form-content, .modal-content {
     font-family: "Cabin";
     text-align: center;
-    color: 'white';
+    color: white;
 
     @media (max-width: 700px) {
       font-size: 1rem;
@@ -301,6 +301,27 @@ body {
     .wrong-password {
       height: 1.4rem;
       color: #922B56;
+    }
+  }
+  .modal-content {
+    .title {
+      font-family: 'DancingScript';
+      font-size: 3rem;
+
+      @media(max-width: 600px) {
+        font-size: 2.5rem;
+      }
+    }
+    .note {
+      color: #ffaa00;
+      font-size: 1.1rem;
+    }
+    .stop {
+      margin: 1rem;
+      .time {
+        font-size: 1.8rem;
+        font-family: 'Sansita';
+      }
     }
   }
 }
@@ -457,7 +478,6 @@ body {
     .note {
       font-family: 'Cabin';
       font-size: 1.25rem;
-      color: #d07849;
       color: #ffaa00;
 
       @media(max-width: 600px) {
@@ -695,6 +715,10 @@ body {
     padding-bottom: 1rem;
     font-size: 2rem;
     color: #ffaa00;
+
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 
   img {

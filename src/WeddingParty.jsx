@@ -1,24 +1,31 @@
 import { useRef, useState } from 'react';
 import {Box, Link, LinkTab, Tab, Tabs} from '@mui/material';
 import useUser from './hooks/useUser';
+import DressShopping from './weddingParty/DressShopping.jsx';
 
-export default function YosemiteRules() {
+export default function WeddingParty() {
   const ref = useRef();
   const user = useUser();
+  const [showDressShopping, setShowDressShopping] = useState(false);
 
   return (
     <div className="wedding-party page">
       <Box>
         <div className="page-title">Important Dates</div>
         {user?.isBridesmaid && (
-          <div className="event">
-            <div className="title">Wedding Dress Shopping</div>
-            <p className="note"> (bridesmaids only)</p>
-            <div className="date">
-              Saturday and Sunday November 18-19, 2023<br/>
-              San Diego or Temecula (undecided)
+          <>
+            <div className="event">
+              <div className="title">Wedding Dress Shopping</div>
+              <p className="note">(bridesmaids only)</p>
+              <div className="date">
+                Saturday November 18, 2023<br/>
+                <Link onClick={() => setShowDressShopping(!showDressShopping)} color="primary" underline="none">Details</Link>
+              </div>
             </div>
-          </div>
+            {showDressShopping && (
+              <DressShopping handleClose={() => setShowDressShopping(false)} />
+            )}
+          </>
         )}
         <div className="event">
           <div className="title">Rehearsal Dinner</div>
