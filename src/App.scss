@@ -324,6 +324,12 @@ body {
   .modal-content {
     height: 100%;
     overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
     .title {
       font-family: 'DancingScript';
