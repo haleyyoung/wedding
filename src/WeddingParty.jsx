@@ -1,10 +1,9 @@
-import { useRef, useState } from 'react';
-import {Box, Link, LinkTab, Tab, Tabs} from '@mui/material';
+import { useState } from 'react';
+import {Box, Link} from '@mui/material';
 import useUser from './hooks/useUser';
 import DressShopping from './weddingParty/DressShopping.jsx';
 
 export default function WeddingParty() {
-  const ref = useRef();
   const user = useUser();
   const [showDressShopping, setShowDressShopping] = useState(false);
 
@@ -54,11 +53,11 @@ export default function WeddingParty() {
           </div>
         </div>
       </Box>
-      <img src={process.env.PUBLIC_URL + "/mountains.png"}/>
+      <img src={process.env.PUBLIC_URL + "/mountains.png"} alt="mountains" />
       <Box>
         <div className="page-title">Lodging</div>
         <div className="content-2-columns">
-          <img src={process.env.PUBLIC_URL + "/airbnb.jpg"}/>
+          <img src={process.env.PUBLIC_URL + "/airbnb.jpg"} alt="airbnb" />
           <Box className="airbnb-text">
             <p>The wedding party and immediate family will be staying in a couple AirBnbs
             we've reserved in June Lake, so no need to worry about lodging for Friday/Saturday nights July 12/13.</p>

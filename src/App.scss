@@ -289,7 +289,9 @@ body {
     font-family: "Cabin";
     text-align: center;
     color: white;
+  }
 
+  .form-content {
     @media (max-width: 700px) {
       font-size: 1rem;
 
@@ -303,12 +305,24 @@ body {
       color: #922B56;
     }
   }
+
+  .chevron {
+    position: fixed;
+    left: unset;
+    bottom: 3.5rem;
+    margin-left: -2.5rem;
+
+    @media(max-width: 700px) {
+      margin-left: -20px;
+    }
+  }
+
   .modal-content {
     .title {
       font-family: 'DancingScript';
       font-size: 3rem;
 
-      @media(max-width: 600px) {
+      @media(max-width: 700px) {
         font-size: 2.5rem;
       }
     }

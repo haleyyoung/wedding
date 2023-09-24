@@ -8,15 +8,13 @@ export default function DressShoping({handleClose}: props) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       sx={{
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
         top: '3rem',
         bottom: '3rem',
         overflow: 'scroll',
       }}
     >
       <div className="modal">
+        <img className="chevron" src="/chevron.gif" alt="down-arrow"/>
         <div className="modal-content">
           <div className="title">
             Wedding Dress Shopping

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import {Link, useLocation} from 'react-router-dom';
@@ -12,10 +11,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import useUser, {findInvitedGuest} from './hooks/useUser';
+import useUser from './hooks/useUser';
 
 const drawerWidth = 240;
 
@@ -48,37 +46,42 @@ export default function DrawerAppBar(userChanged) {
     setActiveTab(tabPath);
   }
 
+  const activeTabStyles = {
+    '& span': {
+      width: 'fit-content',
+      margin: 'auto',
+      borderBottom: '2px solid white',
+    }
+  };
+
+  const tabs = () => {
+    return navItems.map((item) => {
+      const styles = item.location === activeTab ? activeTabStyles : {};
+      return (<ListItem key={item.text} disablePadding>
+          <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
+            <ListItemText
+              primary={item.text}
+              sx={styles}
+            />
+          </ListItemButton>
+        </ListItem>
+      );
+    });
+  };
+
+  const weddingPartyTabStyles = protectedNavItems[0].location === activeTab ? activeTabStyles : {};
+  const rsvpTabStyles = protectedNavItems[1].location === activeTab ? activeTabStyles : {};
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton to={item.location} sx={{ textAlign: 'center' }}>
-              <ListItemText
-                primary={item.text}
-                sx={item.location == activeTab && {
-                  ['& span']: {
-                    width: 'fit-content',
-                    margin: 'auto',
-                    borderBottom: '2px solid white',
-                  }
-                }}
-              />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {tabs()}
         {isWeddingParty && (
           <ListItem key={protectedNavItems[0].text} disablePadding>
             <ListItemButton to={protectedNavItems[0].location} sx={{ textAlign: 'center' }}>
               <ListItemText
                 primary={protectedNavItems[0].text}
-                sx={protectedNavItems[0].location == activeTab && {
-                  ['& span']: {
-                    width: 'fit-content',
-                    margin: 'auto',
-                    borderBottom: '2px solid white',
-                  }
-                }}
+                sx={weddingPartyTabStyles}
               />
             </ListItemButton>
           </ListItem>
@@ -88,13 +91,7 @@ export default function DrawerAppBar(userChanged) {
             <ListItemButton to={protectedNavItems[1].location} sx={{ textAlign: 'center' }}>
               <ListItemText
                 primary={protectedNavItems[1].text}
-                sx={protectedNavItems[1].location == activeTab && {
-                  ['& span']: {
-                    width: 'fit-content',
-                    margin: 'auto',
-                    borderBottom: '2px solid white',
-                  }
-                }}
+                sx={rsvpTabStyles}
               />
             </ListItemButton>
           </ListItem>
@@ -104,6 +101,8 @@ export default function DrawerAppBar(userChanged) {
   );
 
   const container = window !== undefined ? () => window.document.body : undefined;
+  const rsvpTabClass = protectedNavItems[1].location === activeTab ? 'active' : null;
+  const weddingPartyTabClass = protectedNavItems[0].location === activeTab ? 'active': null;
 
   return (
     <Box className='desktop-nav' sx={{ display: 'flex'}}>
@@ -111,7 +110,6 @@ export default function DrawerAppBar(userChanged) {
       <AppBar
         component="nav"
         sx={{
-          background: 'rgb(121,9,111)',
           background: 'linear-gradient(139deg, rgba(121,9,111,1) 0%, rgba(208,128,24,1) 86%, rgba(255,192,0,1) 100%)',
           '& .css-rdiatk-MuiButtonBase-root-MuiTab-root': {
             color: 'text.primary.main',
@@ -133,14 +131,16 @@ export default function DrawerAppBar(userChanged) {
             <MenuIcon />
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button className={item.location == activeTab && 'active'} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
+            {navItems.map((item) => {
+              const tabClass = item.location === activeTab ? 'active': null;
+              return (<Button className={tabClass} key={item.text} component={Link} to={item.location} sx={{ color: '#fff' }} onClick={() => handleNavChange(item.location)}>
                 {item.text}
               </Button>
-            ))}
+              );
+            })}
             {user && !user.isUnrecognizedUser && (
               <Button
-                className={protectedNavItems[1].location == activeTab && 'active'}
+                className={rsvpTabClass}
                 key={protectedNavItems[1].text}
                 component={Link}
                 to={protectedNavItems[1].location}
@@ -152,7 +152,7 @@ export default function DrawerAppBar(userChanged) {
             )}
             {isWeddingParty && (
               <Button
-                className={protectedNavItems[0].location == activeTab && 'active'}
+                className={weddingPartyTabClass}
                 key={protectedNavItems[0].text}
                 component={Link}
                 to={protectedNavItems[0].location}

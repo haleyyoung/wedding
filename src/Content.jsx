@@ -1,22 +1,14 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Box, Button, IconButton, InputAdornment, Link, LinkTab, Modal, Tab, Tabs, TextField} from '@mui/material';
+import {Button, IconButton, InputAdornment, Link, Modal, TextField} from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import { animated, config, easings, useSpring } from '@react-spring/web';
 import useUser, {findInvitedGuest, removeUser, storeUser} from './hooks/useUser';
 
 import React, { useRef, useState } from 'react';
-import { useGesture } from 'react-use-gesture'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import DayOf from './DayOf.jsx';
 
 export default function Content({notifyUserChange}) {
   const ref = useRef();
-  const isMobile = window?.outerWidth < 601;
 
   const [user, setUser] = useState(useUser());
   const [passwordRequired, setPasswordRequired] = useState(false);
@@ -120,7 +112,7 @@ export default function Content({notifyUserChange}) {
       }}
     >
       <div className="user-form">
-        <img className="mountains" src="/mountains.png"/>
+        <img className="mountains" src="/mountains.png" alt="mountains"/>
         <div className="form-content">
           <div style={{color: 'white'}}>Please let us know who you are, so we can show you relevant information</div>
           <TextField color="secondary" label="First Name" variant="outlined"
@@ -205,7 +197,7 @@ export default function Content({notifyUserChange}) {
       <ParallaxLayer sticky={{start: 0, end: 0.75}}>
         <ParallaxLayer offset={0} style={{zIndex: 4}} speed={0.8}>
           <div className="image-1"></div>
-          <img className="chevron" src="/chevron.gif"/>
+          <img className="chevron" src="/chevron.gif" alt="down-arrow"/>
           <div className="navy-background content">
             <div className="text">
               Tenaya Lake<span className="font-change">,</span> Yosemite <br/>
@@ -217,7 +209,7 @@ export default function Content({notifyUserChange}) {
               <div className="time">8pm</div>
             </div>
             <div className="padded-content">
-              <div className="tenaya"><img src="/tenayaLakeSunset.jpg"/></div>
+              <div className="tenaya"><img src="/tenayaLakeSunset.jpg" alt="tenaya lake"/></div>
               <div className="disclaimer">
                 We're going on an adventure for our wedding, and we'd love if you'd
                 join us. We know that this is, by no means, a traditional
@@ -228,7 +220,7 @@ export default function Content({notifyUserChange}) {
             </div>
             {user && (
               <div className="logout">
-                <img className="mountains" src="/mountains.png"/>
+                <img className="mountains" src="/mountains.png" alt="mountains"/>
                 <div className="form-content">
                     <>
                       <div>Hi {user.name}!</div>
