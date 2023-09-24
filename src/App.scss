@@ -266,6 +266,15 @@ body {
 
 .modal {
   height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .user-form, .modal {
@@ -323,13 +332,6 @@ body {
 
   .modal-content {
     height: 100%;
-    overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
 
     .title {
       font-family: 'DancingScript';
