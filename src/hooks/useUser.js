@@ -354,6 +354,17 @@ const invitedGuests = [
     isFlying: false,
     rsvpDate: 'November 1, 2023',
   },
+  {
+    name:'Brandon',
+    lastName: 'Russell',
+    isFamily: false,
+    isWeddingParty: false,
+    isPhotographer: true,
+    isDriving: true,
+    isFlying: false,
+    password: 'minaret',
+    rsvpDate: 'November 1, 2023',
+  },
 ];
 
 export function findInvitedGuest(name, lastName) {

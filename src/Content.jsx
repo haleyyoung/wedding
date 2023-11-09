@@ -23,7 +23,7 @@ export default function Content({notifyUserChange}) {
   const handleUsernameChange = (name) => {
     const invitedGuest = findInvitedGuest(name, lastname);
     if (invitedGuest) {
-      if (invitedGuest.isWeddingParty || invitedGuest.isFamily) {
+      if (invitedGuest.isWeddingParty || invitedGuest.isFamily || invitedGuest.isPhotographer) {
         setPotentialUser(invitedGuest);
         setPasswordRequired(true);
       }
@@ -40,7 +40,7 @@ export default function Content({notifyUserChange}) {
   const handleLastnameChange = (name) => {
     const invitedGuest = findInvitedGuest(username, name);
     if (invitedGuest) {
-      if (invitedGuest.isWeddingParty || invitedGuest.isFamily) {
+      if (invitedGuest.isWeddingParty || invitedGuest.isFamily || invitedGuest.isPhotographer) {
         setPotentialUser(invitedGuest);
         setPasswordRequired(true);
       }

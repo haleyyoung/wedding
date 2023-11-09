@@ -455,7 +455,16 @@ body {
   z-index: 5;
 }
 
-.day-of {
+.day-of, .photographers {
+  .note {
+    font-family: 'Cabin';
+    font-size: 1.25rem;
+    color: #ffaa00;
+
+    @media(max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
   .agenda-item {
     gap: 20px;
     padding: 3rem;
@@ -464,7 +473,6 @@ body {
       padding: 0;
       padding-top: 80px;
     }
-
     .time {
       font-size: 2.25rem;
       font-family: 'Sansita';

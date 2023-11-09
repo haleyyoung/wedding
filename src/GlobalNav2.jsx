@@ -33,6 +33,7 @@ export default function DrawerAppBar(userChanged) {
   const protectedNavItems = [
     {text: user?.isWeddingParty ? "Wedding Party" : "Family", location: "/wedding-party"},
     {text: "Rsvp", location: "/rsvp"},
+    {text: "Photographers", location: "/photographers"},
   ];
 
   useEffect(() => {
@@ -71,6 +72,7 @@ export default function DrawerAppBar(userChanged) {
 
   const weddingPartyTabStyles = protectedNavItems[0].location === activeTab ? activeTabStyles : {};
   const rsvpTabStyles = protectedNavItems[1].location === activeTab ? activeTabStyles : {};
+  const photographersTabStyles = protectedNavItems[2].location === activeTab ? activeTabStyles : {};
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -82,6 +84,16 @@ export default function DrawerAppBar(userChanged) {
               <ListItemText
                 primary={protectedNavItems[0].text}
                 sx={weddingPartyTabStyles}
+              />
+            </ListItemButton>
+          </ListItem>
+        )}
+        {user && user.isPhotographer && (
+          <ListItem key={protectedNavItems[2].text} disablePadding>
+            <ListItemButton to={protectedNavItems[2].location} sx={{ textAlign: 'center' }}>
+              <ListItemText
+                primary={protectedNavItems[2].text}
+                sx={photographersTabStyles}
               />
             </ListItemButton>
           </ListItem>
@@ -103,6 +115,7 @@ export default function DrawerAppBar(userChanged) {
   const container = window !== undefined ? () => window.document.body : undefined;
   const rsvpTabClass = protectedNavItems[1].location === activeTab ? 'active' : null;
   const weddingPartyTabClass = protectedNavItems[0].location === activeTab ? 'active': null;
+  const photographersTabClass = protectedNavItems[2].location === activeTab ? 'active': null;
 
   return (
     <Box className='desktop-nav' sx={{ display: 'flex'}}>
@@ -159,6 +172,17 @@ export default function DrawerAppBar(userChanged) {
                 sx={{ color: '#fff' }}
                 onClick={() => handleNavChange(protectedNavItems[0].location)}>
                 {protectedNavItems[0].text}
+              </Button>
+            )}
+            {user && user.isPhotographer && (
+              <Button
+                className={photographersTabClass}
+                key={protectedNavItems[2].text}
+                component={Link}
+                to={protectedNavItems[2].location}
+                sx={{ color: '#fff' }}
+                onClick={() => handleNavChange(protectedNavItems[2].location)}>
+                {protectedNavItems[2].text}
               </Button>
             )}
           </Box>

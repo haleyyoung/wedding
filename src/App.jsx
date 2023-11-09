@@ -3,7 +3,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import logo from './logo.svg';
 import './App.scss';
 import Content from './Content.jsx';
 import DayOf from './DayOf.jsx';
@@ -12,6 +11,7 @@ import Planning from './Planning.jsx';
 import Registry from './Registry.jsx';
 import Rsvp from './Rsvp.jsx';
 import WeddingParty from './WeddingParty.jsx';
+import Photographers from './Photographers.jsx';
 import NotFound from './NotFound.jsx';
 import Root from "./routes/root.jsx";
 
@@ -85,6 +85,16 @@ function App() {
         {
           path: "",
           element: <WeddingParty />,
+        },
+      ],
+    },
+    {
+      path: "/photographers",
+      element: <Root/>,
+      children:[
+        {
+          path: "",
+          element: <Photographers />,
         },
       ],
     },
