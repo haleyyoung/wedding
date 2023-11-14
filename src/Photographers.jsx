@@ -1,4 +1,4 @@
-import {Box} from '@mui/material';
+import {Box, Link} from '@mui/material';
 
 export default function Photographers() {
   return (
@@ -73,7 +73,7 @@ export default function Photographers() {
           Picnic
         </div>
         <div className="text">
-           Get whatever photos you can of the picnic activities. We'll also have a basket of food/blanket for you two.
+           Get whatever photos you can of the picnic activities. We'll also have food for you two.
         </div>
       </Box>
       <Box className="agenda-item">
@@ -103,8 +103,8 @@ export default function Photographers() {
           Dessert Bar
         </div>
         <div className="text">
-          Our original plan was to have our family snap some photos of the first/father-daughter/mother-son dances at the end of the night.
-          If you're willing and able to make it, we'd really just love to get some photos of the dances (~9:30pm).
+          Our original plan was to have our family snap some photos of the first dance/father-daughter/mother-son dances at the end of the night.
+          If you're willing and able to make it, we'd really just love to get some photos of the dances (~9:30pm?).
           Other than that, feel free to bring your wife, eat some good desserts, hang with Katelyn and Paz. If you're up
           for it, we think this would be pretty light-weight and quick (10-15 min). Let us know! We can talk about this over the phone or whenever.
         </div>
@@ -120,7 +120,11 @@ export default function Photographers() {
           Yosemite Valley
         </div>
         <div className="text">
-          Some spots to hit: Yosemite Falls, tree-lined path, along the Merced river somewhere, Vernal Falls, Happy Isles, other ideas?
+          Some ideas for spots to hit: Yosemite Falls, tree-lined paths (
+          <Link href="https://maps.app.goo.gl/tpT9pdSVxJXB9Bvy9" target="_blank" color="primary" underline="none">#1</Link>
+          {" and "}
+          <Link href="https://maps.app.goo.gl/zrQCRcBbJ5smrpJK9" target="_blank" color="primary" underline="none">#2</Link>
+          ), along the Merced river somewhere, Vernal Falls, Happy Isles, other ideas?
         </div>
       </Box>
       <Box className="agenda-item">
