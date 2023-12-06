@@ -38,7 +38,7 @@ export default function DayOf() {
               underline="none"
             >
               Destination
-            </Link>
+            </Link> (shorts okay)
           </div>
         </div>
         <div className="text">

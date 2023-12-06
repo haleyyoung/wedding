@@ -209,7 +209,7 @@ export default function Content({notifyUserChange}) {
               <div className="time">8pm</div>
             </div>
             <div className="padded-content">
-              <div className="tenaya"><img src="/tenayaLakeSunset.jpg" alt="tenaya lake"/></div>
+              <div className="tenaya"><img src="/holdingHands.png" alt="engagement photo"/></div>
               <div className="disclaimer">
                 We're going on an adventure for our wedding, and we'd love if you'd
                 join us. We know that this is, by no means, a traditional

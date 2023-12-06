@@ -255,12 +255,15 @@ body {
   flex: 2;
 
   img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 7px;
   }
 
   @media (max-width: 600px) {
     left: 10%;
+    img {
+      max-width: 100%;
+    }
   }
 }
 

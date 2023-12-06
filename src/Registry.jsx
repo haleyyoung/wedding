@@ -23,7 +23,7 @@ export default function Registry() {
         <img src={process.env.PUBLIC_URL + "/ahwahnee.jpg"}/>
       </div>
       <div className="content-2-columns">
-        <div className="item order-2">Our honeymoon</div>
+        <div className="item order-2">Our honeymoon to Puerto Rico</div>
         <img className="order-2" src={process.env.PUBLIC_URL + "/hawaii.png"}/>
       </div>
       <div className="content-2-columns">
