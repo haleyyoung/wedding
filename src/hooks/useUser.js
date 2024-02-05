@@ -423,7 +423,7 @@ const invitedGuests = [
     isPhotographer: false,
     isDriving: true,
     isFlying: true,
-    rsvpDate: 'February 1, 2024',
+    rsvpDate: 'April 1, 2024',
   },
   {
     name:'Sandra',
@@ -433,7 +433,7 @@ const invitedGuests = [
     isPhotographer: false,
     isDriving: true,
     isFlying: true,
-    rsvpDate: 'February 1, 2024',
+    rsvpDate: 'April 1, 2024',
   },
 ];
 
