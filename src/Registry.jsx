@@ -23,12 +23,12 @@ export default function Registry() {
         <img src={process.env.PUBLIC_URL + "/ahwahnee.jpg"}/>
       </div>
       <div className="content-2-columns">
-        <div className="item order-2">Our honeymoon to Puerto Rico</div>
+        <div className="item order-2">Our honeymoon to Kauai</div>
         <img className="order-2" src={process.env.PUBLIC_URL + "/hawaii.png"}/>
       </div>
       <div className="content-2-columns">
-        <div className="item order-2">A new dryer</div>
-        <img src={process.env.PUBLIC_URL + "/dryer.png"}/>
+        <div className="item order-2">A new fridge</div>
+        <img src={process.env.PUBLIC_URL + "/fridge.png"}/>
       </div>
       <div className="content-2-columns">
         <div className="item">A new dishwasher</div>

@@ -458,6 +458,12 @@ body {
   z-index: 5;
 }
 
+.day-of {
+  ol {
+    list-style-position: inside;
+  }
+}
+
 .day-of, .photographers {
   .note {
     font-family: 'Cabin';

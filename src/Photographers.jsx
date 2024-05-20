@@ -5,7 +5,7 @@ export default function Photographers() {
     <div className="day-of page">
       <div className="page-title">Photography Schedule</div>
       <div className="note">
-        This is a draft to give you an idea.We'll work through this together as the time gets closer.
+        This is a draft to give you an idea. We'll work through this together as the time gets closer.
       </div>
       <Box className="agenda-item">
         <div className="time">
@@ -55,7 +55,18 @@ export default function Photographers() {
       </Box>
       <Box className="agenda-item">
         <div className="time">
-          9:30 - 10am
+          9:30 - 10:30am
+        </div>
+        <div className="title">
+          Picnic
+        </div>
+        <div className="text">
+           Get whatever photos you can of the picnic activities. We'll also have food for you two.
+        </div>
+      </Box>
+      <Box className="agenda-item">
+        <div className="time">
+          10:15 - 11am
         </div>
         <div className="title">
           Group Photos
@@ -63,17 +74,6 @@ export default function Photographers() {
         <div className="text">
            We'd like family/wedding party photos as well as a photo of us with each family. This will be happening
            while people are eating their picnic breakfasts, so the guests will be slightly entertained.
-        </div>
-      </Box>
-      <Box className="agenda-item">
-        <div className="time">
-          10 - 11am
-        </div>
-        <div className="title">
-          Picnic
-        </div>
-        <div className="text">
-           Get whatever photos you can of the picnic activities. We'll also have food for you two.
         </div>
       </Box>
       <Box className="agenda-item">
@@ -104,7 +104,7 @@ export default function Photographers() {
         </div>
         <div className="text">
           Our original plan was to have our family snap some photos of the first dance/father-daughter/mother-son dances at the end of the night.
-          If you're willing and able to make it, we'd really just love to get some photos of the dances (~9:30pm?).
+          If you're willing and able to make it, we'd really just love to get some photos of the dances (~8:20pm?).
           Other than that, feel free to bring your wife, eat some good desserts, hang with Katelyn and Paz. If you're up
           for it, we think this would be pretty light-weight and quick (10-15 min). Let us know! We can talk about this over the phone or whenever.
         </div>

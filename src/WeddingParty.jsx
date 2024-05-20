@@ -63,6 +63,7 @@ export default function WeddingParty() {
             we've reserved in June Lake, so no need to worry about lodging for Friday/Saturday nights July 12/13.</p>
             <p>Each couple will have their own bedroom (definitely) and bathroom (likely).</p>
             <p>No pets, unfortunately.</p>
+            <p>Your airbnb: <Link href="https://maps.app.goo.gl/g55Zn1EMuSB2VXkJ9" color="primary" underline="none" target="_blank">27 Carson View Drive, June Lake, CA</Link></p>
           </Box>
         </div>
       </Box>
