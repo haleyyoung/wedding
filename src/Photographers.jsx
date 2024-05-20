@@ -72,8 +72,7 @@ export default function Photographers() {
           Group Photos
         </div>
         <div className="text">
-           We'd like family/wedding party photos as well as a photo of us with each family. This will be happening
-           while people are eating their picnic breakfasts, so the guests will be slightly entertained.
+           We'd like family/wedding party photos as well as a photo of us with each family.
         </div>
       </Box>
       <Box className="agenda-item">

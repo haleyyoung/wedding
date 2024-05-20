@@ -65,6 +65,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+1. `yarn predeploy`
+2. Copy `build` folder into `wedding-prod` and push
+3. Prod IP `146.190.167.137`
+4. `cd /apps/wedding-prod`
+5. Git pull
+6. `cp -r . /var/www/garrisonandhaley.wedding/`
+
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
