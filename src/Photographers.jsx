@@ -9,7 +9,7 @@ export default function Photographers() {
       </div>
       <Box className="agenda-item">
         <div className="time">
-          6 - 7am
+          6 - 6:45am
         </div>
         <div className="title">
           Getting Ready
@@ -17,7 +17,7 @@ export default function Photographers() {
       </Box>
       <Box className="agenda-item">
         <div className="time">
-          7 - 7:30am
+          6:45 - 7:15am
         </div>
         <div className="title">
           Group photos
@@ -102,10 +102,10 @@ export default function Photographers() {
           Dessert Bar
         </div>
         <div className="text">
-          Our original plan was to have our family snap some photos of the first dance/father-daughter/mother-son dances at the end of the night.
+          Our current plan is to have our family snap some photos of the first dance/father-daughter/mother-son dances at the end of the night.
           If you're willing and able to make it, we'd really just love to get some photos of the dances (~8:20pm?).
-          Other than that, feel free to bring your wife, eat some good desserts, hang with Katelyn and Paz. If you're up
-          for it, we think this would be pretty light-weight and quick (10-15 min). Let us know! We can talk about this over the phone or whenever.
+          Other than that, feel free to bring your wife, eat some good desserts, and hangout. If you're up
+          for it, we think this would be pretty light-weight and quick (10-15 min). Let us know! We can talk about this over the phone or email.
         </div>
       </Box>
 
@@ -134,8 +134,7 @@ export default function Photographers() {
           Galaxy Photos?
         </div>
         <div className="text">
-          No preference on where, you'll have a better idea on time than we do. Do you think we should tack this on after the dessert bar
-          (if you come) instead?
+          No preference on where, you'll have a better idea on time than we do.
         </div>
       </Box>
 

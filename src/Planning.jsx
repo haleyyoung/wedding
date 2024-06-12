@@ -81,7 +81,7 @@ export default function Planning() {
           </Link><br/>
           <Link href="https://www.fs.usda.gov/recarea/inyo/recarea/?recid=20562" color="primary" underline="none" target="_blank">
             Hartley Springs campground
-          </Link>
+          </Link><br/>
           <Link href="https://goo.gl/maps/zmZbQhUobgUe3MX98" color="primary" underline="none" target="_blank">
             Owens River Road
           </Link>
@@ -135,7 +135,7 @@ export default function Planning() {
           Yosemite
         </div>
         <div className="text">
-          Your park entrance pass will be valid for 7 days! You should take advantage of it!
+          Your park entrance pass will be valid for 3 days! You should take advantage of it!
           <br/>
           <div>If you'd like to stay in the valley before or after the wedding, book ASAP</div>
           <Link href="https://www.travelyosemite.com/lodging/yosemite-valley-lodge/" target="_blank" color="primary" underline="none">
@@ -155,9 +155,11 @@ export default function Planning() {
           </Link>
         </div>
         <div className="note">
-          Important note: The 120 didn't open until the end of July in 2023. If this happens again,
-          we will have no access to Yosemite from the Eastern Sierras and will have to hold our ceremony
-          somewhere else. Make sure you have a tentative backup plan for any Yosemite travel plans you may make.
+          <s>
+            Important note: The 120 didn't open until the end of July in 2023. If this happens again,
+            we will have no access to Yosemite from the Eastern Sierras and will have to hold our ceremony
+            somewhere else. Make sure you have a tentative backup plan for any Yosemite travel plans you may make.
+          </s><br/>The 120 is open!
         </div>
       </Box>
       <img className="separator" src={process.env.PUBLIC_URL + "/trees.png"}/>

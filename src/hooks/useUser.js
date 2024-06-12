@@ -80,6 +80,7 @@ const invitedGuests = [
     isFamily: false,
     isWeddingParty: true,
     isBridesmaid: true,
+    isPhotographer: true,
     isDriving: true,
     isFlying: true,
     password: 'sneeze!where?',
